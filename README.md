@@ -25,7 +25,7 @@ https://raw.githubusercontent.com/jn950/live/main/tv/pllive.txt
 - **仓库文件加速 线路1**
 - **仓库文件加速 线路2**
 
----- http://my9.ltd/tv/pblive.txt
+----
 
 
 ## 截图
