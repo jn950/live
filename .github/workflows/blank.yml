@@ -2,7 +2,10 @@ name: Update TV Source File
 
 on:
   schedule:
-    - cron: '0 22 * * *'  # UTC 22:00 = 北京时间 06:00
+    # 北京时间 09:00 = UTC 01:00
+    - cron: '0 2 * * *'
+    # 北京时间 17:00 = UTC 09:00  
+    - cron: '0 10 * * *'
   workflow_dispatch:
 
 permissions:
