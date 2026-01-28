@@ -1,5 +1,5 @@
 MoMo更新,#genre#
-2026-01-28 11:03:28,https://gcalic.v.myalicdn.com/gc/wgw05_1/index.m3u8
+2026-01-28 17:29:58,https://gcalic.v.myalicdn.com/gc/wgw05_1/index.m3u8
 
 上海电信,#genre#
 CCTV4K,http://116.235.57.79:4022/rtp/233.18.204.188:5140
