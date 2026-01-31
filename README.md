@@ -37,7 +37,7 @@
 ![截图4](/img/live4.jpg)
 
 ## 扫描进群
-![截图2](/img/iuai-qun.jpg)
+![截图2](/img/iuai-qun.png)
 
 ## Star History
 [![GitHub stars](https://img.shields.io/github/stars/jn950/live)](https://github.com/jn950/live/stargazers)
