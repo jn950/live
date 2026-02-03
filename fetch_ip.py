@@ -38,8 +38,12 @@ def replace_id_in_line(line, new_id):
     return re.sub(pattern, replacement, line)
 
 def fetch_and_process():
-    # 从环境变量读取 URL，如果不存在则使用默认值（本地测试用）
-    url = os.environ.get('IP_SOURCE_URL', 'https://tv1288.xyz/ip.php')
+    # 从环境变量读取 URL
+    url = os.environ.get('IP_SOURCE_URL')
+    if not url:
+        log("错误: 未设置 IP_SOURCE_URL 环境变量，请在 GitHub Secrets 中配置。")
+        return False
+
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
