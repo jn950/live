@@ -130,6 +130,19 @@ def fetch_and_process():
         header_content = []
         header_content.append("MoMo更新,#genre#")
         header_content.append(f"{current_date},https://my9.ltd/momo-480.mp4")
+        header_content.append("安徽黄山风景区卧云峰,https://gctxyc.liveplay.myqcloud.com/gc/wgw02_1/index.m3u8")
+        header_content.append("安徽黄山风景区飞来石,https://gctxyc.liveplay.myqcloud.com/gc/hsptgy_1/index.m3u8")
+        header_content.append("江苏南京玄武湖景区,https://gctxyc.liveplay.myqcloud.com/gc/xwh01_1/index.m3u8")
+        header_content.append("江苏徐州之夜,https://gctxyc.liveplay.myqcloud.com/gc/hspyt_1/index.m3u8")
+        header_content.append("浙江嘉兴乌镇,https://gctxyc.liveplay.myqcloud.com/gc/zjwzblt_1/index.m3u8")
+        header_content.append("浙江舟山东极岛,https://gcalic.v.myalicdn.com/gc/djd01_1/index.m3u8")
+        header_content.append("浙江温州廊桥文化园,https://gcalic.v.myalicdn.com/gc/cntv411-zbzg_1/index.m3u8")
+        header_content.append("浙江嵊泗县中心渔港,https://gctxyc.liveplay.myqcloud.com/gc/emsyh_1/index.m3u8")
+        header_content.append("广东车八岭自然保护区,https://gctxyc.liveplay.myqcloud.com/gc/zjjjjdl_1/index.m3u8")
+        header_content.append("广东汕头公园,https://gctxyc.liveplay.myqcloud.com/gc/bsszjs_1/index.m3u8")
+        header_content.append("山东青岛艾山天文台,https://gcalic.v.myalicdn.com/gc/jhs01_1/index.m3u8")
+        header_content.append("湖北武汉黄鹤楼,https://gctxyc.liveplay.myqcloud.com/gc/djyqyl1_1/index.m3u8")
+        header_content.append("湖南邵阳崀山名胜区,https://gctxyc.liveplay.myqcloud.com/gc/hkts02_1/index.m3u8")
         
         # 准备频道内容
         isp_processed_content = {} # 存储每个 ISP 处理后的频道行
