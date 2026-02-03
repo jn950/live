@@ -55,8 +55,8 @@ def fetch_and_process():
     
     for attempt in range(max_retries):
         try:
-            log(f"尝试第 {attempt + 1} 次获取数据 (超时设置: 30s)...")
-            response = requests.get(url, headers=headers, timeout=30, proxies={"http": None, "https": None})
+            log(f"尝试第 {attempt + 1} 次获取数据 (超时设置: 50s)...")
+            response = requests.get(url, headers=headers, timeout=50, proxies={"http": None, "https": None})
             response.raise_for_status()
             text = response.text
             break # 成功获取，跳出循环
@@ -118,7 +118,7 @@ def fetch_and_process():
         sorted_isp_list.extend(other_isps)
 
         # 1. 整合 pllive.txt
-        pllive_file = os.path.join("tv", "pllive2.txt")
+        pllive_file = os.path.join("tv", "pllive.txt")
         ptxt_dir = "template"
         all_pllive_content = []
         
