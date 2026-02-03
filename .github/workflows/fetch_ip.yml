@@ -5,11 +5,12 @@ on:
     - cron: '0 2 * * *'  # 每天北京时间上午10点运行 (UTC 2:00)
   workflow_dispatch:      # 允许手动触发
 
+permissions:
+  contents: write
+
 jobs:
   fetch-and-sync:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
 
     steps:
       - name: Checkout code
@@ -35,10 +36,10 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           
-          # 1. 暂存生成的成果
+          # 1. 暂存成果
           mv tv/pllive.txt pllive.txt.tmp
           
-          # 2. 强制拉取远程最新状态
+          # 2. 同步远程状态 (解决 non-fast-forward)
           git fetch origin main
           git checkout main
           git reset --hard origin/main
@@ -54,5 +55,5 @@ jobs:
           
           git commit -m "📺 Auto update merged live data: $(date +'%Y-%m-%d %H:%M:%S')"
           
-          # 4. 强力推送，如果普通推送失败则尝试变基推送
-          git push origin main || (git pull --rebase -X theirs origin main && git push origin main)
+          # 4. 推送 (不带 origin main 强制参数，让 git 使用默认行为)
+          git push
