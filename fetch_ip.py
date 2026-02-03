@@ -67,37 +67,37 @@ def fetch_and_process():
                 raise
 
     text = response.text
-        
-        # 0. 保存原始内容到 remote_data/tv1288_ips.txt
-        remote_data_dir = "remote_data"
-        remote_file = os.path.join(remote_data_dir, "tv1288_ips.txt")
-        if not os.path.exists(remote_data_dir):
-            os.makedirs(remote_data_dir)
-        with open(remote_file, "w", encoding="utf-8") as rf:
-            rf.write(text)
-        log(f"原始数据已保存到 {remote_file}")
-        
-        lines = text.split('\n')
-        current_isp = ""
-        
-        tasks = []
-        with ThreadPoolExecutor(max_workers=20) as executor:
-            for line in lines:
-                line = line.strip()
-                if not line:
-                    continue
-                
-                # 如果是 IP:PORT 格式
-                if re.match(r'^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}:\d+$', line):
-                    if current_isp:
-                        tasks.append((current_isp, line, executor.submit(get_response_time, line)))
-                else:
-                    # 假设非空且非 IP 的行是 ISP 名称
-                    current_isp = line
+    
+    # 0. 保存原始内容到 remote_data/tv1288_ips.txt
+    remote_data_dir = "remote_data"
+    remote_file = os.path.join(remote_data_dir, "tv1288_ips.txt")
+    if not os.path.exists(remote_data_dir):
+        os.makedirs(remote_data_dir)
+    with open(remote_file, "w", encoding="utf-8") as rf:
+        rf.write(text)
+    log(f"原始数据已保存到 {remote_file}")
+    
+    lines = text.split('\n')
+    current_isp = ""
+    
+    tasks = []
+    with ThreadPoolExecutor(max_workers=20) as executor:
+        for line in lines:
+            line = line.strip()
+            if not line:
+                continue
+            
+            # 如果是 IP:PORT 格式
+            if re.match(r'^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}:\d+$', line):
+                if current_isp:
+                    tasks.append((current_isp, line, executor.submit(get_response_time, line)))
+            else:
+                # 假设非空且非 IP 的行是 ISP 名称
+                current_isp = line
 
-        # 收集结果并按 ISP 分组
-        isp_results = {}
-        for isp, ip_port, future in tasks:
+    # 收集结果并按 ISP 分组
+    isp_results = {}
+    for isp, ip_port, future in tasks:
             resp_time = future.result()
             if resp_time is not None:
                 if isp not in isp_results:
