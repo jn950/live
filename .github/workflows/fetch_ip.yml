@@ -35,4 +35,10 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add tv/pllive.txt
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto update merged live data: $(date +'%Y-%m-%d %H:%M:%S')" && git push)
+          if ! git diff --quiet || ! git diff --staged --quiet; then
+            git commit -m "Auto update merged live data: $(date +'%Y-%m-%d %H:%M:%S')"
+            git pull origin main --rebase
+            git push origin main
+          else
+            echo "No changes to commit"
+          fi
