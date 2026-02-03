@@ -13,12 +13,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
@@ -34,18 +32,8 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          
-          # 1. 暂存生成的本地文件
-          mv tv/pllive.txt pllive.txt.tmp
-          
-          # 2. 强制切换到 main 分支并同步到远程最新状态
-          git fetch origin main
-          git checkout -B main origin/main
-          
-          # 3. 还原生成的文件
-          mv pllive.txt.tmp tv/pllive.txt
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           
           git add tv/pllive.txt
           if git diff --cached --quiet; then
@@ -53,5 +41,8 @@ jobs:
             exit 0
           fi
           
-          git commit -m "Auto update merged live data: $(date +'%Y-%m-%d %H:%M:%S')"
+          git commit -m "📺 Auto update merged live data: $(date +'%Y-%m-%d %H:%M:%S')"
+          
+          # 模仿成功案例的拉取推送逻辑，并增加冲突自动解决
+          git pull --rebase -X theirs origin main
           git push origin main
