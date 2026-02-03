@@ -118,7 +118,7 @@ def fetch_and_process():
         sorted_isp_list.extend(other_isps)
 
         # 1. 整合 pllive.txt
-        pllive_file = os.path.join("tv", "pllive.txt")
+        pllive_file = os.path.join("tv", "pllive2.txt")
         ptxt_dir = "template"
         all_pllive_content = []
         
