@@ -5,21 +5,18 @@ on:
     - cron: '0 2 * * *'  # 每天北京时间上午10点运行 (UTC 2:00)
   workflow_dispatch:      # 允许手动触发
 
-permissions:
-  contents: write
-
 jobs:
   fetch-and-sync:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
         with:
-          fetch-depth: 0 # 获取完整历史以确保 rebase 成功
+          fetch-depth: 0
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v4
         with:
           python-version: '3.10'
 
@@ -34,39 +31,8 @@ jobs:
           python fetch_ip.py
 
       - name: Commit and push changes
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # 配置 Git 身份
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          
-          # 1. 暂存新生成的数据文件，防止被 reset 掉
-          if [ -f "tv/pllive.txt" ]; then
-            mv tv/pllive.txt pllive_new.txt
-          else
-            echo "Error: tv/pllive.txt not found!"
-            exit 1
-          fi
-          
-          # 2. 强制同步远程仓库状态，消除 non-fast-forward 隐患
-          git fetch origin main
-          git checkout main
-          git reset --hard origin/main
-          
-          # 3. 将新数据覆盖回去
-          mv pllive_new.txt tv/pllive.txt
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
           git add tv/pllive.txt
-          
-          # 4. 检查内容是否有实际变化
-          if git diff --cached --quiet; then
-            echo "No changes to commit"
-            exit 0
-          fi
-          
-          # 5. 提交变更
-          git commit -m "📺 Auto update merged live data: $(date +'%Y-%m-%d %H:%M:%S')"
-          
-          # 6. 推送更新
-          # 如果仍然担心冲突，可以使用 --force，对于纯数据更新仓库这是安全的
-          git push origin main
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto update merged live data: $(date +'%Y-%m-%d %H:%M:%S')" && git push)
