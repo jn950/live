@@ -174,7 +174,7 @@ def fetch_and_process():
                         
                         replaced_line = replace_id_in_line(line, top_id)
                         
-                        # 检查是否含有“凤凰”或“财经” (复制到 MoMo 分组)
+                        # 检查是否含有“凤凰”或“财经” (复制到 财经凤凰 分组)
                         if "凤凰" in replaced_line or "财经" in replaced_line:
                             phoenix_finance_channels.append(replaced_line)
                         
@@ -190,7 +190,7 @@ def fetch_and_process():
                         isp_channels.append("") # 两个 ID 之间的空行
                 
                 if isp_channels:
-                    # 只有当有普通频道时，才添加 ISP 头部和频道内容
+                    # 只有当有普通频道时，才添加 ISP 头部 and 频道内容
                     isp_processed_content[isp] = [genre_header] + isp_channels + [""]
             else:
                 log(f"  警告: 找不到对应的 JSON 文件: {json_path}")
@@ -198,9 +198,11 @@ def fetch_and_process():
         # 组装最终文件内容
         final_content = []
         final_content.extend(header_content)
+        final_content.append("") # MoMo 更新组后的空行
         
-        # 将提取的“凤凰”和“财经”频道添加到 MoMo 更新组的末尾
+        # 将提取的“凤凰”和“财经”频道添加到新建的 财经凤凰 分组
         if phoenix_finance_channels:
+            final_content.append("财经凤凰,#genre#")
             # 去重处理
             seen_pf = set()
             unique_pf = []
@@ -209,10 +211,9 @@ def fetch_and_process():
                     unique_pf.append(ch)
                     seen_pf.add(ch)
             final_content.extend(unique_pf)
+            final_content.append("") # 财经凤凰组后的空行
         
-        final_content.append("") # MoMo 更新组后的空行
-        
-        # 将 4K 频道移动到 MoMo 更新下面
+        # 将 4K 频道移动到 财经凤凰 下面
         if all_4k_channels:
             # 添加 4K 频道专属分类
             final_content.append("4K频道,#genre#")
