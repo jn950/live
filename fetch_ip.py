@@ -216,7 +216,7 @@ def fetch_and_process():
         # 将 4K 频道移动到 财经凤凰 下面
         if all_4k_channels:
             # 添加 4K 频道专属分类
-            final_content.append("4K频道,#genre#")
+            final_content.append("4K 频道,#genre#")
             # 去重处理（相同内容的 4K 频道只保留一个，但保留顺序）
             seen_4k = set()
             unique_4k = []
