@@ -130,25 +130,25 @@ def fetch_and_process():
         header_content = []
         header_content.append("MoMo更新,#genre#")
         header_content.append(f"{current_date},https://my9.ltd/momo-480.mp4")
-        header_content.append("安徽黄山风景区卧云峰,https://gctxyc.liveplay.myqcloud.com/gc/wgw02_1/index.m3u8")
-        header_content.append("安徽黄山风景区飞来石,https://gctxyc.liveplay.myqcloud.com/gc/hsptgy_1/index.m3u8")
-        header_content.append("江苏南京玄武湖景区,https://gctxyc.liveplay.myqcloud.com/gc/xwh01_1/index.m3u8")
-        header_content.append("江苏徐州之夜,https://gctxyc.liveplay.myqcloud.com/gc/hspyt_1/index.m3u8")
-        header_content.append("浙江嘉兴乌镇,https://gctxyc.liveplay.myqcloud.com/gc/zjwzblt_1/index.m3u8")
-        header_content.append("浙江舟山东极岛,https://gcalic.v.myalicdn.com/gc/djd01_1/index.m3u8")
-        header_content.append("浙江温州廊桥文化园,https://gcalic.v.myalicdn.com/gc/cntv411-zbzg_1/index.m3u8")
-        header_content.append("浙江嵊泗县中心渔港,https://gctxyc.liveplay.myqcloud.com/gc/emsyh_1/index.m3u8")
-        header_content.append("广东车八岭自然保护区,https://gctxyc.liveplay.myqcloud.com/gc/zjjjjdl_1/index.m3u8")
-        header_content.append("广东汕头公园,https://gctxyc.liveplay.myqcloud.com/gc/bsszjs_1/index.m3u8")
-        header_content.append("山东青岛艾山天文台,https://gcalic.v.myalicdn.com/gc/jhs01_1/index.m3u8")
-        header_content.append("湖北武汉黄鹤楼,https://gctxyc.liveplay.myqcloud.com/gc/djyqyl1_1/index.m3u8")
-        header_content.append("湖南邵阳崀山名胜区,https://gctxyc.liveplay.myqcloud.com/gc/hkts02_1/index.m3u8")
+        
+        # 从 template_直播中国.txt 提取风景区频道并添加到 MoMo 更新组
+        scenic_template_path = os.path.join(ptxt_dir, "template_直播中国.txt")
+        if os.path.exists(scenic_template_path):
+            log(f"正在从 {scenic_template_path} 提取风景区频道...")
+            with open(scenic_template_path, "r", encoding="utf-8") as sf:
+                for line in sf:
+                    line = line.strip()
+                    if line and ",http" in line: # 只提取包含频道名和 URL 的行
+                        header_content.append(line)
+        else:
+            log(f"警告: 找不到风景区模板文件 {scenic_template_path}")
         
         # 准备频道内容
         isp_processed_content = {} # 存储每个 ISP 处理后的频道行
         all_4k_channels = [] # 存储所有提取出来的 4K 频道
+        phoenix_finance_channels = [] # 存储提取出来的“凤凰”和“财经”频道
         
-        log(f"开始处理频道数据并提取 4K 频道...")
+        log(f"开始处理频道数据并提取 4K、凤凰、财经频道...")
         
         for isp in sorted_isp_list:
             json_filename = f"{isp}.json"
@@ -173,6 +173,11 @@ def fetch_and_process():
                             continue
                         
                         replaced_line = replace_id_in_line(line, top_id)
+                        
+                        # 检查是否含有“凤凰”或“财经” (复制到 MoMo 分组)
+                        if "凤凰" in replaced_line or "财经" in replaced_line:
+                            phoenix_finance_channels.append(replaced_line)
+                        
                         # 检查是否含有 "4K"
                         if "4K" in replaced_line.upper(): # 不区分大小写
                             # 如果是 4K 频道，添加到全局 4K 列表
@@ -193,6 +198,19 @@ def fetch_and_process():
         # 组装最终文件内容
         final_content = []
         final_content.extend(header_content)
+        
+        # 将提取的“凤凰”和“财经”频道添加到 MoMo 更新组的末尾
+        if phoenix_finance_channels:
+            # 去重处理
+            seen_pf = set()
+            unique_pf = []
+            for ch in phoenix_finance_channels:
+                if ch not in seen_pf:
+                    unique_pf.append(ch)
+                    seen_pf.add(ch)
+            final_content.extend(unique_pf)
+        
+        final_content.append("") # MoMo 更新组后的空行
         
         # 将 4K 频道移动到 MoMo 更新下面
         if all_4k_channels:
