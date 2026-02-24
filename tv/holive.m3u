@@ -1,5 +1,5 @@
 #EXTM3U x-tvg-url="http://qyong.site:1234/playback.xml" catchup="append" catchup-source="?playbackbegin=${(b)yyyyMMddHHmmss}&playbackend=${(e)yyyyMMddHHmmss}"
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/momo.png" group-title="MO测试",2026-02-24
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/momo.png" group-title="MO测试",2026-02-25
 http://my9.ltd/momo-480.mp4
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/风云足球.png" group-title="MO测试",风云足球
 http://183.184.48.176:9003/hls/42/index.m3u8
@@ -762,5 +762,6 @@ http://171.11.67.47:5000/962870948
 http://171.11.67.47:5000/962870979
 #EXTINF:-1 tvg-id="WTA多哈站Day6" tvg-name="WTA WTA多哈站Day6 智能球路轨迹 23:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2025/3/7/1000000012341069e1a8.jpg" group-title="体育-明天",WTA WTA多哈站Day6 智能球路轨迹 23:00
 http://171.11.67.47:5000/962932014
+
 
 
