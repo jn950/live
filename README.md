@@ -37,6 +37,12 @@
 
 ![截图4](/img/live4.jpg)
 
+![截图5](/img/live5.png)
+
+![截图6](/img/live6.png)
+
+![截图7](/img/live7.png)
+
 ## 扫描进群
 ![截图2](/img/iuai-qun.png)
 
