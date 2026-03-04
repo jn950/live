@@ -30,10 +30,6 @@
 
 ## 截图
 
-![截图3](/img/live3.png)
-
-![截图4](/img/live4.jpg)
-
 ![截图5](/img/live5.png)
 
 ![截图6](/img/live6.png)
