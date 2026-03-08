@@ -44,7 +44,7 @@
 
 - 点击 apk - 查看，进入 res/xml，找到 config_webview_packages.xml 打开，选择 反编译。
 
-- ![image-20220816155849058](Android%20WebView%20%E6%9B%B4%E6%96%B0.assets/image-20220816155849058.png)
+- ![image-20220816155849058](https://gitee.com/akenclub/android-web-view/raw/master/Android%20WebView%20%E6%9B%B4%E6%96%B0.assets/image-20220816155849058.png)
 
 - 此时看到这个 xml 文件里，已经有一个 webviewprovider，里面包名就是系统内置的 webview，com.android.webview 是很旧的了，之后更新的 webview 已经改为 com.google.android.webview。
 
@@ -85,7 +85,7 @@
 
 - 在开发者选项中，在 WebView 实现里面可以看到刚刚新增的 WebView103，选中。
 
-  ![image-20220817083610610](README.assets/image-20220817083610610.png)
+  ![image-20220817083610610](https://gitee.com/akenclub/android-web-view/raw/master/README.assets/image-20220817083610610.png)
   
   
 
