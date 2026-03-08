@@ -97,7 +97,7 @@
 
 - 上面的网站都能看到当前的内核版本
 
-  ![image-20220816161959600](Android%20WebView%20%E6%9B%B4%E6%96%B0.assets/image-20220816161959600.png)
+  ![image-20220816161959600](https://gitee.com/akenclub/android-web-view/raw/master/Android%20WebView%20%E6%9B%B4%E6%96%B0.assets/image-20220816161959600.png)
 
 #### 二、Android 9
 
