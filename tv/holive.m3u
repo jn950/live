@@ -1,14 +1,26 @@
 #EXTM3U x-tvg-url="http://qyong.site:1234/playback.xml" catchup="append" catchup-source="?playbackbegin=${(b)yyyyMMddHHmmss}&playbackend=${(e)yyyyMMddHHmmss}"
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/momo.png" group-title="MO测试",2026-04-14
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/momo.png" group-title="MO测试",2026-04-15
 http://my9.ltd/momo-480.mp4
+#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/江苏城市.png" group-title="MO测试",江苏城市
+http://116.147.109.239:9003/hls/17/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/新闻综合.png" group-title="MO测试",新闻综合
 http://116.228.170.214:9003/hls/18/index.m3u8
+#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/江苏综艺.png" group-title="MO测试",江苏综艺
+http://116.147.109.239:9003/hls/18/index.m3u8
+#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/江苏体育.png" group-title="MO测试",江苏体育
+http://116.147.109.239:9003/hls/19/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/中国教育.png" group-title="MO测试",中国教育
 http://116.228.170.214:9003/hls/19/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/欢笑剧场.png" group-title="MO测试",欢笑剧场
 http://116.228.170.214:9003/hls/20/index.m3u8
+#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/江苏影视.png" group-title="MO测试",江苏影视
+http://116.147.109.239:9003/hls/20/index.m3u8
+#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/江苏公共新闻.png" group-title="MO测试",江苏公共新闻
+http://116.147.109.239:9003/hls/21/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/动漫秀场.png" group-title="MO测试",动漫秀场
 http://116.228.170.214:9003/hls/21/index.m3u8
+#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/江苏国际.png" group-title="MO测试",江苏国际
+http://116.147.109.239:9003/hls/22/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/都市剧场.png" group-title="MO测试",都市剧场
 http://116.228.170.214:9003/hls/22/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/郑州文体高清.png" group-title="MO测试",郑州文体高清
@@ -61,170 +73,174 @@ http://116.228.170.214:9003/hls/73/index.m3u8
 http://116.228.170.214:9003/hls/74/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/国学.png" group-title="MO测试",国学
 http://116.228.170.214:9003/hls/75/index.m3u8
-#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/CCTV1.png" group-title="央视频道",CCTV1
-http://183.191.50.247:9003/hls/1/index.m3u8
+#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/test.png" group-title="MO测试",test
+http://116.147.109.239:9003/hls/100/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/CCTV1.png" group-title="央视频道",CCTV1
 http://116.228.170.214:9003/hls/1/index.m3u8
+#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/CCTV1.png" group-title="央视频道",CCTV1
+http://116.147.109.239:9003/hls/1/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/CCTV2.png" group-title="央视频道",CCTV2
-http://183.191.50.247:9003/hls/2/index.m3u8
+http://116.147.109.239:9003/hls/2/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/CCTV2.png" group-title="央视频道",CCTV2
 http://116.228.170.214:9003/hls/2/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/CCTV3.png" group-title="央视频道",CCTV3
-http://183.191.50.247:9003/hls/3/index.m3u8
+http://116.147.109.239:9003/hls/3/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/CCTV3.png" group-title="央视频道",CCTV3
 http://116.228.170.214:9003/hls/3/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/CCTV4.png" group-title="央视频道",CCTV4
 http://116.228.170.214:9003/hls/4/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/CCTV4.png" group-title="央视频道",CCTV4
-http://183.191.50.247:9003/hls/4/index.m3u8
-#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/CCTV5.png" group-title="央视频道",CCTV5
-http://183.191.50.247:9003/hls/5/index.m3u8
+http://116.147.109.239:9003/hls/4/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/CCTV5.png" group-title="央视频道",CCTV5
 http://116.228.170.214:9003/hls/5/index.m3u8
-#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/CCTV5+.png" group-title="央视频道",CCTV5+
-http://183.191.50.247:9003/hls/6/index.m3u8
+#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/CCTV5.png" group-title="央视频道",CCTV5
+http://116.147.109.239:9003/hls/5/index.m3u8
+#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/CCTV6.png" group-title="央视频道",CCTV6
+http://116.147.109.239:9003/hls/6/index.m3u8
+#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/CCTV7.png" group-title="央视频道",CCTV7
+http://116.147.109.239:9003/hls/7/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/CCTV6.png" group-title="央视频道",CCTV6
 http://116.228.170.214:9003/hls/7/index.m3u8
-#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/CCTV6.png" group-title="央视频道",CCTV6
-http://183.191.50.247:9003/hls/7/index.m3u8
+#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/CCTV8.png" group-title="央视频道",CCTV8
+http://116.147.109.239:9003/hls/8/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/CCTV7.png" group-title="央视频道",CCTV7
 http://116.228.170.214:9003/hls/8/index.m3u8
-#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/CCTV7.png" group-title="央视频道",CCTV7
-http://183.191.50.247:9003/hls/8/index.m3u8
-#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/CCTV8.png" group-title="央视频道",CCTV8
-http://183.191.50.247:9003/hls/9/index.m3u8
+#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/CCTV9.png" group-title="央视频道",CCTV9
+http://116.147.109.239:9003/hls/9/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/CCTV8.png" group-title="央视频道",CCTV8
 http://116.228.170.214:9003/hls/9/index.m3u8
+#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/CCTV10.png" group-title="央视频道",CCTV10
+http://116.147.109.239:9003/hls/10/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/CCTV9.png" group-title="央视频道",CCTV9
 http://116.228.170.214:9003/hls/10/index.m3u8
-#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/CCTV9.png" group-title="央视频道",CCTV9
-http://183.191.50.247:9003/hls/10/index.m3u8
-#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/CCTV10.png" group-title="央视频道",CCTV10
-http://183.191.50.247:9003/hls/11/index.m3u8
+#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/CCTV11.png" group-title="央视频道",CCTV11
+http://116.147.109.239:9003/hls/11/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/CCTV10.png" group-title="央视频道",CCTV10
 http://116.228.170.214:9003/hls/11/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/CCTV11.png" group-title="央视频道",CCTV11
 http://116.228.170.214:9003/hls/12/index.m3u8
-#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/CCTV11.png" group-title="央视频道",CCTV11
-http://183.191.50.247:9003/hls/12/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/CCTV12.png" group-title="央视频道",CCTV12
-http://183.191.50.247:9003/hls/13/index.m3u8
+http://116.147.109.239:9003/hls/12/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/CCTV12.png" group-title="央视频道",CCTV12
 http://116.228.170.214:9003/hls/13/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/CCTV13.png" group-title="央视频道",CCTV13
-http://116.228.170.214:9003/hls/14/index.m3u8
+http://116.147.109.239:9003/hls/13/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/CCTV13.png" group-title="央视频道",CCTV13
-http://183.191.50.247:9003/hls/14/index.m3u8
+http://116.228.170.214:9003/hls/14/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/CCTV14.png" group-title="央视频道",CCTV14
-http://183.191.50.247:9003/hls/15/index.m3u8
+http://116.147.109.239:9003/hls/14/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/CCTV14.png" group-title="央视频道",CCTV14
 http://116.228.170.214:9003/hls/15/index.m3u8
-#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/CCTV15.png" group-title="央视频道",CCTV15
-http://183.191.50.247:9003/hls/16/index.m3u8
-#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/CCTV16.png" group-title="央视频道",CCTV16
-http://183.191.50.247:9003/hls/17/index.m3u8
-#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/CCTV17.png" group-title="央视频道",CCTV17
-http://183.191.50.247:9003/hls/18/index.m3u8
+#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/湖南卫视.png" group-title="卫视频道",湖南卫视
+http://116.147.109.239:9003/hls/29/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/湖南卫视.png" group-title="卫视频道",湖南卫视
 http://116.228.170.214:9003/hls/31/index.m3u8
-#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/湖南卫视.png" group-title="卫视频道",湖南卫视
-http://183.191.50.247:9003/hls/33/index.m3u8
+#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/浙江卫视.png" group-title="卫视频道",浙江卫视
+http://116.147.109.239:9003/hls/25/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/浙江卫视.png" group-title="卫视频道",浙江卫视
 http://116.228.170.214:9003/hls/33/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/江苏卫视.png" group-title="卫视频道",江苏卫视
-http://116.228.170.214:9003/hls/34/index.m3u8
+http://116.147.109.239:9003/hls/16/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/江苏卫视.png" group-title="卫视频道",江苏卫视
-http://183.191.50.247:9003/hls/35/index.m3u8
+http://116.228.170.214:9003/hls/34/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/东方卫视.png" group-title="卫视频道",东方卫视
 http://116.228.170.214:9003/hls/17/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/东方卫视.png" group-title="卫视频道",东方卫视
-http://183.191.50.247:9003/hls/23/index.m3u8
-#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/北京卫视.png" group-title="卫视频道",北京卫视
-http://183.191.50.247:9003/hls/20/index.m3u8
+http://116.147.109.239:9003/hls/23/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/北京卫视.png" group-title="卫视频道",北京卫视
 http://116.228.170.214:9003/hls/23/index.m3u8
+#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/北京卫视.png" group-title="卫视频道",北京卫视
+http://116.147.109.239:9003/hls/24/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/广东卫视.png" group-title="卫视频道",广东卫视
 http://116.228.170.214:9003/hls/25/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/广东卫视.png" group-title="卫视频道",广东卫视
-http://183.191.50.247:9003/hls/26/index.m3u8
+http://116.147.109.239:9003/hls/30/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/深圳卫视.png" group-title="卫视频道",深圳卫视
 http://116.228.170.214:9003/hls/24/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/深圳卫视.png" group-title="卫视频道",深圳卫视
-http://183.191.50.247:9003/hls/43/index.m3u8
+http://116.147.109.239:9003/hls/45/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/安徽卫视.png" group-title="卫视频道",安徽卫视
-http://183.191.50.247:9003/hls/21/index.m3u8
+http://116.147.109.239:9003/hls/27/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/安徽卫视.png" group-title="卫视频道",安徽卫视
 http://116.228.170.214:9003/hls/32/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/山东卫视.png" group-title="卫视频道",山东卫视
-http://116.228.170.214:9003/hls/36/index.m3u8
+http://116.147.109.239:9003/hls/28/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/山东卫视.png" group-title="卫视频道",山东卫视
-http://183.191.50.247:9003/hls/41/index.m3u8
+http://116.228.170.214:9003/hls/36/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/天津卫视.png" group-title="卫视频道",天津卫视
 http://116.228.170.214:9003/hls/27/index.m3u8
+#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/天津卫视.png" group-title="卫视频道",天津卫视
+http://116.147.109.239:9003/hls/37/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/湖北卫视.png" group-title="卫视频道",湖北卫视
 http://116.228.170.214:9003/hls/29/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/湖北卫视.png" group-title="卫视频道",湖北卫视
-http://183.191.50.247:9003/hls/32/index.m3u8
+http://116.147.109.239:9003/hls/39/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/江西卫视.png" group-title="卫视频道",江西卫视
 http://116.228.170.214:9003/hls/30/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/江西卫视.png" group-title="卫视频道",江西卫视
-http://183.191.50.247:9003/hls/36/index.m3u8
-#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/黑龙江卫视.png" group-title="卫视频道",黑龙江卫视
-http://183.191.50.247:9003/hls/31/index.m3u8
+http://116.147.109.239:9003/hls/38/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/黑龙江卫视.png" group-title="卫视频道",黑龙江卫视
 http://116.228.170.214:9003/hls/41/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/吉林卫视.png" group-title="卫视频道",吉林卫视
-http://183.191.50.247:9003/hls/34/index.m3u8
-#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/吉林卫视.png" group-title="卫视频道",吉林卫视
 http://116.228.170.214:9003/hls/37/index.m3u8
+#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/吉林卫视.png" group-title="卫视频道",吉林卫视
+http://116.147.109.239:9003/hls/40/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/辽宁卫视.png" group-title="卫视频道",辽宁卫视
-http://183.191.50.247:9003/hls/37/index.m3u8
+http://116.147.109.239:9003/hls/26/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/辽宁卫视.png" group-title="卫视频道",辽宁卫视
 http://116.228.170.214:9003/hls/38/index.m3u8
-#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/福建卫视.png" group-title="卫视频道",福建卫视
-http://183.191.50.247:9003/hls/24/index.m3u8
-#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/甘肃卫视.png" group-title="卫视频道",甘肃卫视
-http://183.191.50.247:9003/hls/25/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/重庆卫视.png" group-title="卫视频道",重庆卫视
 http://116.228.170.214:9003/hls/26/index.m3u8
-#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/广西卫视.png" group-title="卫视频道",广西卫视
-http://183.191.50.247:9003/hls/27/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/东南卫视.png" group-title="卫视频道",东南卫视
 http://116.228.170.214:9003/hls/28/index.m3u8
+#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/广西卫视.png" group-title="卫视频道",广西卫视
+http://116.147.109.239:9003/hls/31/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/海南卫视.png" group-title="卫视频道",海南卫视
-http://183.191.50.247:9003/hls/28/index.m3u8
-#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/河北卫视.png" group-title="卫视频道",河北卫视
-http://183.191.50.247:9003/hls/29/index.m3u8
+http://116.147.109.239:9003/hls/32/index.m3u8
+#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/重庆卫视.png" group-title="卫视频道",重庆卫视
+http://116.147.109.239:9003/hls/33/index.m3u8
+#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/四川卫视.png" group-title="卫视频道",四川卫视
+http://116.147.109.239:9003/hls/34/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/河南卫视.png" group-title="卫视频道",河南卫视
-http://183.191.50.247:9003/hls/30/index.m3u8
+http://116.147.109.239:9003/hls/35/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/河南卫视.png" group-title="卫视频道",河南卫视
 http://116.228.170.214:9003/hls/35/index.m3u8
-#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/内蒙卫视.png" group-title="卫视频道",内蒙卫视
-http://183.191.50.247:9003/hls/38/index.m3u8
-#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/宁夏卫视.png" group-title="卫视频道",宁夏卫视
-http://183.191.50.247:9003/hls/39/index.m3u8
+#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/东南卫视.png" group-title="卫视频道",东南卫视
+http://116.147.109.239:9003/hls/36/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/河北卫视.png" group-title="卫视频道",河北卫视
 http://116.228.170.214:9003/hls/39/index.m3u8
-#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/青海卫视.png" group-title="卫视频道",青海卫视
-http://183.191.50.247:9003/hls/40/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/四川卫视.png" group-title="卫视频道",四川卫视
 http://116.228.170.214:9003/hls/40/index.m3u8
-#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/陕西卫视.png" group-title="卫视频道",陕西卫视
-http://183.191.50.247:9003/hls/42/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/海南卫视.png" group-title="卫视频道",海南卫视
 http://116.228.170.214:9003/hls/42/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/贵州卫视.png" group-title="卫视频道",贵州卫视
 http://116.228.170.214:9003/hls/43/index.m3u8
+#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/贵州卫视.png" group-title="卫视频道",贵州卫视
+http://116.147.109.239:9003/hls/43/index.m3u8
+#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/青海卫视.png" group-title="卫视频道",青海卫视
+http://116.147.109.239:9003/hls/44/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/宁夏卫视.png" group-title="卫视频道",宁夏卫视
 http://116.228.170.214:9003/hls/45/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/山西卫视.png" group-title="卫视频道",山西卫视
 http://116.228.170.214:9003/hls/46/index.m3u8
+#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/云南卫视.png" group-title="卫视频道",云南卫视
+http://116.147.109.239:9003/hls/46/index.m3u8
+#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/河北卫视.png" group-title="卫视频道",河北卫视
+http://116.147.109.239:9003/hls/47/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/广西卫视.png" group-title="卫视频道",广西卫视
 http://116.228.170.214:9003/hls/47/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/陕西卫视.png" group-title="卫视频道",陕西卫视
 http://116.228.170.214:9003/hls/48/index.m3u8
+#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/宁夏卫视.png" group-title="卫视频道",宁夏卫视
+http://116.147.109.239:9003/hls/48/index.m3u8
+#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/甘肃卫视.png" group-title="卫视频道",甘肃卫视
+http://116.147.109.239:9003/hls/49/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/甘肃卫视.png" group-title="卫视频道",甘肃卫视
 http://116.228.170.214:9003/hls/49/index.m3u8
+#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/新疆卫视.png" group-title="卫视频道",新疆卫视
+http://116.147.109.239:9003/hls/50/index.m3u8
+#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/内蒙古卫视.png" group-title="卫视频道",内蒙古卫视
+http://116.147.109.239:9003/hls/51/index.m3u8
 
 #EXTINF:-1 tvg-id="CCTV1综合" tvg-name="CCTV1综合" tvg-logo="http://wapx.cmvideo.cn:8080/publish/poms/image/2201/057/821/202204010054_1626677671392_H32_1080.webp" group-title="央视",CCTV1综合
 http://171.213.214.228:7788/608807420
