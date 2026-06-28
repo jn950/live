@@ -830,10 +830,7 @@
     {
       "name": "MoMo影视",
       "type": 0,
-// "url":"https://codeberg.org/my9/tv/raw/branch/main/lu",
-// "url":"http://my9.ltd/tv/live",
-//      "url": "http://ztha.top/TVBox/tv/thtv.txt",
-"url":"http://my9.ltd/tv/l",
+     "url":"http://my9.ltd/tv/l",
       "playerType": 1
     },  
 {
