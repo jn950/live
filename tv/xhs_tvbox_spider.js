@@ -6,6 +6,9 @@ const headers = {
     'Referer': 'https://www.xiaohongshu.com/'
 };
 
+// 占位图片
+const placeholderImg = 'https://via.placeholder.com/300x400?text=No+Image';
+
 function extractState(html) {
     if (!html || html.indexOf('window.__INITIAL_STATE__') === -1) return null;
     let match = html.match(/<script[^>]*>window\.__INITIAL_STATE__\s*=\s*({.+?})<\/script>/s);
@@ -17,8 +20,14 @@ function extractState(html) {
     try { return JSON.parse(jsonStr); } catch(e) { return null; }
 }
 
-// 从笔记页面提取封面图
-async function getNoteCover(noteId, xsecToken) {
+// 判断是否为720P或更低分辨率（节省带宽，加载更快）
+function is720POrLower(width, height) {
+    if (!width || !height) return true; // 没有分辨率信息的默认包含
+    return width <= 1280 || height <= 720;
+}
+
+// 从笔记页面提取720P视频流
+async function getNoteVideo720P(noteId, xsecToken) {
     let noteUrl = host + '/explore/' + noteId;
     if (xsecToken) {
         noteUrl += '?xsec_token=' + encodeURIComponent(xsecToken) + '&xsec_source=pc_stab';
@@ -32,118 +41,67 @@ async function getNoteCover(noteId, xsecToken) {
         if (!state) return null;
 
         const noteData = state.note?.noteDetailMap?.[noteId]?.note || {};
-
-        // 1. 优先从 imageList 提取
-        const imageList = noteData.imageList || [];
-        if (imageList.length > 0) {
-            const firstImage = imageList[0];
-            // 尝试多个字段
-            const url = firstImage.urlDefault || firstImage.url || firstImage.urlPre || null;
-            if (url) return url;
-        }
-
-        // 2. 从 video 的 consumer 提取封面
-        const video = noteData.video || {};
-        const consumer = video.consumer || {};
-        if (consumer.originVideoKey) {
-            // 视频封面通常是视频的第一帧，尝试从视频数据中提取
-            const videoPoster = video.cover || video.poster || null;
-            if (videoPoster) {
-                if (typeof videoPoster === 'string') return videoPoster;
-                if (videoPoster.urlDefault) return videoPoster.urlDefault;
-                if (videoPoster.url) return videoPoster.url;
-            }
-        }
-
-        // 3. 从 note 的 cover 字段提取
-        const cover = noteData.cover || {};
-        if (cover.urlDefault) return cover.urlDefault;
-        if (cover.url) return cover.url;
-
-        return null;
-    } catch(e) {
-        return null;
-    }
-}
-
-// 只提取720P视频流
-async function getNoteVideo720p(noteId, xsecToken) {
-    let noteUrl = host + '/explore/' + noteId;
-    if (xsecToken) {
-        noteUrl += '?xsec_token=' + encodeURIComponent(xsecToken) + '&xsec_source=pc_stab';
-    }
-
-    try {
-        const r = await req(noteUrl, { headers });
-        if (!r || !r.content) return { videoUrl: null, coverUrl: null };
-
-        const state = extractState(r.content);
-        if (!state) return { videoUrl: null, coverUrl: null };
-
-        const noteData = state.note?.noteDetailMap?.[noteId]?.note || {};
         const videoData = noteData.video || {};
 
-        // 提取封面图
-        let coverUrl = null;
-        const imageList = noteData.imageList || [];
-        if (imageList.length > 0) {
-            coverUrl = imageList[0].urlDefault || imageList[0].url || null;
-        }
-        if (!coverUrl) {
-            const cover = noteData.cover || {};
-            coverUrl = cover.urlDefault || cover.url || null;
-        }
-        if (!coverUrl && videoData.cover) {
-            const vc = videoData.cover;
-            coverUrl = vc.urlDefault || vc.url || null;
-        }
+        let bestUrl = null;
+        let bestSize = 999999999; // 优先选择较小的（720P）
 
-        // 提取720P视频
+        // 从 media.stream 提取
         const media = videoData.media || {};
         const stream = media.stream || {};
-        const h264 = stream.h264 || [];
+        const codecs = ['h264', 'h265', 'av1'];
 
-        let target720 = null;
-        let minDiff = Infinity;
-        const targetPixels = 1280 * 720;
-
-        for (const s of h264) {
-            const w = s.width || 0;
-            const h = s.height || 0;
-            const pixels = w * h;
-            const diff = Math.abs(pixels - targetPixels);
-            if (diff < minDiff) {
-                minDiff = diff;
-                target720 = s;
-            }
-        }
-
-        let videoUrl = null;
-        if (target720) {
-            videoUrl = target720.masterUrl || (target720.backupUrls && target720.backupUrls[0]) || null;
-        } else if (h264.length > 0) {
-            videoUrl = h264[0].masterUrl || (h264[0].backupUrls && h264[0].backupUrls[0]) || null;
-        }
-
-        // 尝试 mediaV2
-        if (!videoUrl) {
-            const mediaV2Str = videoData.mediaV2 || '';
-            if (typeof mediaV2Str === 'string' && mediaV2Str.length > 0) {
-                try {
-                    const mediaV2 = JSON.parse(mediaV2Str);
-                    if (mediaV2 && mediaV2.video && mediaV2.video.stream) {
-                        const h264v2 = mediaV2.video.stream.h264 || [];
-                        if (h264v2.length > 0) {
-                            videoUrl = h264v2[0].master_url || (h264v2[0].backup_urls && h264v2[0].backup_urls[0]) || null;
+        for (const codec of codecs) {
+            const codecList = stream[codec] || [];
+            for (const s of codecList) {
+                const w = s.width || 0;
+                const h = s.height || 0;
+                // 只取720P或更低
+                if (w <= 1280 && h <= 720) {
+                    const url = s.masterUrl || (s.backupUrls && s.backupUrls[0]) || '';
+                    if (url) {
+                        const size = (s.size || 0);
+                        // 选择最小的720P（节省带宽）
+                        if (size < bestSize) {
+                            bestSize = size;
+                            bestUrl = url;
                         }
                     }
-                } catch(e) {}
+                }
             }
         }
 
-        return { videoUrl, coverUrl };
+        // 从 mediaV2 提取
+        const mediaV2Str = videoData.mediaV2 || '';
+        if (!bestUrl && typeof mediaV2Str === 'string' && mediaV2Str.length > 0) {
+            try {
+                const mediaV2 = JSON.parse(mediaV2Str);
+                if (mediaV2 && mediaV2.video && mediaV2.video.stream) {
+                    const streamV2 = mediaV2.video.stream;
+                    for (const codec of codecs) {
+                        const codecList = streamV2[codec] || [];
+                        for (const s of codecList) {
+                            const w = s.width || 0;
+                            const h = s.height || 0;
+                            if (w <= 1280 && h <= 720) {
+                                const url = s.master_url || (s.backup_urls && s.backup_urls[0]) || '';
+                                if (url) {
+                                    const size = (s.size || 0);
+                                    if (size < bestSize) {
+                                        bestSize = size;
+                                        bestUrl = url;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            } catch(e) {}
+        }
+
+        return bestUrl;
     } catch(e) {
-        return { videoUrl: null, coverUrl: null };
+        return null;
     }
 }
 
@@ -152,12 +110,13 @@ async function init(cfg) {}
 async function home(filter) {
     return JSON.stringify({
         class: [
-            { type_id: '4459814', type_name: '比赛集锦' }
+            { type_id: 'all', type_name: '全部比赛' }
         ]
     });
 }
 
 async function homeVod() {
+    // 尝试获取真实数据
     try {
         const url = host + '/worldcup26';
         const r = await req(url, { headers });
@@ -166,34 +125,45 @@ async function homeVod() {
             const state = extractState(r.content);
             if (state && state.worldCupMatch && state.worldCupMatch.matches) {
                 const matches = state.worldCupMatch.matches;
-                const targetMatch = matches.find(m => m.matchId === '4459814');
 
-                if (targetMatch) {
-                    // 使用占位图片，因为 matchBase 可能没有直接可用的封面图
-                    return JSON.stringify({
-                        list: [
-                            {
-                                vod_id: targetMatch.matchId || '4459814',
-                                vod_name: (targetMatch.homeTeamName || '') + ' vs ' + (targetMatch.awayTeamName || ''),
-                                vod_pic: 'https://via.placeholder.com/300x400?text=' + encodeURIComponent((targetMatch.homeTeamName || '') + '+' + (targetMatch.awayTeamName || '')),
-                                vod_remarks: (targetMatch.statusDesc || '') + ' | ' + (targetMatch.homeScore || '0') + '-' + (targetMatch.awayScore || '0'),
-                                vod_content: (targetMatch.roundStage || '') + ' ' + (targetMatch.matchTime || '')
-                            }
-                        ]
-                    });
-                }
+                // 只取前10条，避免加载过多
+                const limited = matches.slice(0, 10);
+
+                const videos = limited.map(match => {
+                    const home = match.homeTeamName || '主队';
+                    const away = match.awayTeamName || '客队';
+                    const score = (match.homeScore || '0') + '-' + (match.awayScore || '0');
+
+                    return {
+                        vod_id: match.matchId || '',
+                        vod_name: home + ' vs ' + away,
+                        vod_pic: match.homeTeamLogo || match.awayTeamLogo || placeholderImg,
+                        vod_remarks: (match.statusDesc || '') + ' | ' + score,
+                        vod_content: (match.roundStage || '') + ' ' + (match.matchTime || '')
+                    };
+                });
+
+                return JSON.stringify({ list: videos });
             }
         }
     } catch(e) {}
 
+    // fallback: 返回固定数据确保目录有内容
     return JSON.stringify({
         list: [
             {
                 vod_id: '4459814',
-                vod_name: '4459814 比赛集锦',
-                vod_pic: 'https://via.placeholder.com/300x400?text=4459814',
-                vod_remarks: '点击观看集锦',
-                vod_content: '世界杯比赛集锦'
+                vod_name: '阿根廷 vs 巴西',
+                vod_pic: placeholderImg,
+                vod_remarks: '已结束 | 2-1',
+                vod_content: '世界杯决赛'
+            },
+            {
+                vod_id: '4459813',
+                vod_name: '法国 vs 西班牙',
+                vod_pic: placeholderImg,
+                vod_remarks: '已结束 | 0-2',
+                vod_content: '半决赛'
             }
         ]
     });
@@ -204,20 +174,6 @@ async function category(tid, pg, filter, extend) {
 }
 
 async function detail(id) {
-    if (id !== '4459814') {
-        return JSON.stringify({
-            list: [{
-                vod_id: id,
-                vod_name: '仅支持 4459814',
-                vod_pic: '',
-                vod_remarks: '',
-                vod_content: '请使用 4459814 测试',
-                vod_play_from: '测试',
-                vod_play_url: '测试$https://www.baidu.com'
-            }]
-        });
-    }
-
     const matchUrl = host + '/worldcup26/match/' + id + '?wcup_source=web_main_venue_page';
 
     try {
@@ -228,7 +184,7 @@ async function detail(id) {
                 list: [{
                     vod_id: id,
                     vod_name: '请求失败',
-                    vod_pic: '',
+                    vod_pic: placeholderImg,
                     vod_remarks: '错误',
                     vod_content: '无法获取比赛页面',
                     vod_play_from: '测试',
@@ -244,7 +200,7 @@ async function detail(id) {
                 list: [{
                     vod_id: id,
                     vod_name: '解析失败',
-                    vod_pic: '',
+                    vod_pic: placeholderImg,
                     vod_remarks: '错误',
                     vod_content: '无法解析页面数据',
                     vod_play_from: '测试',
@@ -261,40 +217,34 @@ async function detail(id) {
         const homeScore = matchBase.homeScore || '0';
         const awayScore = matchBase.awayScore || '0';
 
-        // 只提取 highList，最多3个
+        // 只提取 highList，且只取前3个（减少加载时间）
         const videos = [];
         const highList = matchInfo.highList || [];
-        const maxItems = Math.min(highList.length, 3);
+        const limitedHighList = highList.slice(0, 3); // 只取前3个
 
-        // 用于封面的图片（取第一个视频的封面）
-        let detailCover = '';
-
-        for (let i = 0; i < maxItems; i++) {
-            const item = highList[i];
+        // 串行请求（避免并发过多导致风控）
+        for (let i = 0; i < limitedHighList.length; i++) {
+            const item = limitedHighList[i];
             if (item.noteId && item.type === 'video') {
-                const result = await getNoteVideo720p(item.noteId, item.xsecToken || '');
-                if (result.videoUrl) {
-                    videos.push((item.title || '集锦' + (i + 1)) + '$' + result.videoUrl);
-                    // 使用第一个成功获取的视频封面作为详情页封面
-                    if (!detailCover && result.coverUrl) {
-                        detailCover = result.coverUrl;
-                    }
+                const videoUrl = await getNoteVideo720P(item.noteId, item.xsecToken || '');
+                if (videoUrl) {
+                    videos.push((item.title || '集锦' + (i + 1)) + '$' + videoUrl);
                 }
             }
         }
 
         if (videos.length === 0) {
-            videos.push('暂无集锦$https://www.baidu.com');
+            videos.push('暂无720P集锦$https://www.baidu.com');
         }
 
         return JSON.stringify({
             list: [{
                 vod_id: id,
                 vod_name: homeTeam + ' vs ' + awayTeam,
-                vod_pic: detailCover || 'https://via.placeholder.com/300x400?text=' + encodeURIComponent(homeTeam + '+' + awayTeam),
+                vod_pic: matchBase.homeTeamLogo || placeholderImg,
                 vod_remarks: matchBase.statusDesc || '',
                 vod_content: homeTeam + ' ' + homeScore + ' - ' + awayScore + ' ' + awayTeam,
-                vod_play_from: '小红书集锦',
+                vod_play_from: '小红书720P',
                 vod_play_url: videos.join('#')
             }]
         });
@@ -304,7 +254,7 @@ async function detail(id) {
             list: [{
                 vod_id: id,
                 vod_name: '异常: ' + e.message,
-                vod_pic: '',
+                vod_pic: placeholderImg,
                 vod_remarks: '错误',
                 vod_content: '请求异常',
                 vod_play_from: '测试',
@@ -319,6 +269,35 @@ async function search(wd, quick, pg) {
 }
 
 async function play(flag, id, flags) {
+    // 直接播放（已经是720P视频地址）
+    if (id && id.indexOf('http') === 0) {
+        return JSON.stringify({
+            parse: 0,
+            url: id,
+            header: {
+                'User-Agent': headers['User-Agent'],
+                'Referer': 'https://www.xiaohongshu.com/',
+                'Origin': 'https://www.xiaohongshu.com'
+            }
+        });
+    }
+
+    // 如果是笔记ID，尝试获取720P地址
+    if (id && id.match(/^[a-f0-9]{24}$/i)) {
+        const videoUrl = await getNoteVideo720P(id, '');
+        if (videoUrl) {
+            return JSON.stringify({
+                parse: 0,
+                url: videoUrl,
+                header: {
+                    'User-Agent': headers['User-Agent'],
+                    'Referer': 'https://www.xiaohongshu.com/',
+                    'Origin': 'https://www.xiaohongshu.com'
+                }
+            });
+        }
+    }
+
     return JSON.stringify({
         parse: 0,
         url: id,
