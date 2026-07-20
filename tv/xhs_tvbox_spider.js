@@ -358,7 +358,7 @@ async function detail(id) {
     const round = match.roundStage || '';
     const status = match.statusDesc || '';
     const group = match.groupLabel || '';
-    const dateLabel = item.dateLabel || '';
+    const dateLabel = match.dateLabel || '';
 
     let bgPic = '';
     if (match.liveInfo && match.liveInfo.cover) {
