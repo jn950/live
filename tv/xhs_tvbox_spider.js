@@ -336,115 +336,106 @@ async function detail(id) {
         'high': '高光时刻'
     };
 
-    const match = await getMatchById(matchId);
-    if (!match) {
-        return JSON.stringify({
-            list: [{
-                vod_id: id,
-                vod_name: '比赛未找到: ' + matchId,
-                vod_pic: '',
-                vod_remarks: '',
-                vod_content: 'ID: ' + id,
-                vod_play_from: '测试',
-                vod_play_url: '测试$https://www.baidu.com'
-            }]
-        });
-    }
-
-    const homeTeam = match.homeTeamName || '';
-    const awayTeam = match.awayTeamName || '';
-    const homeScore = match.homeScore ?? '';
-    const awayScore = match.awayScore ?? '';
-    const round = match.roundStage || '';
-    const status = match.statusDesc || '';
-    const group = match.groupLabel || '';
-    const dateLabel = match.dateLabel || '';
-
+    // ========== 关键修复：获取单场比赛详情 ==========
+    const matchDetail = await getMatchDetail(matchId);
+    
+    // 从详情页获取 match 基础信息
+    const matchBase = matchDetail?.matchBase || {};
+    const homeTeam = matchBase.homeTeamName || '';
+    const awayTeam = matchBase.awayTeamName || '';
+    const homeScore = matchBase.homeScore ?? '';
+    const awayScore = matchBase.awayScore ?? '';
+    const round = matchBase.roundStage || '';
+    const status = matchBase.statusDesc || '';
+    const group = matchBase.groupLabel || '';
+    
+    // 从赛程列表缓存获取封面（因为详情页可能不同）
+    const matchFromList = await getMatchById(matchId) || {};
     let bgPic = '';
-    if (match.liveInfo && match.liveInfo.cover) {
-        bgPic = match.liveInfo.cover;
-    } else if (match.homeTeamLogo) {
-        bgPic = match.homeTeamLogo;
+    if (matchFromList.liveInfo && matchFromList.liveInfo.cover) {
+        bgPic = matchFromList.liveInfo.cover;
+    } else if (matchFromList.homeTeamLogo) {
+        bgPic = matchFromList.homeTeamLogo;
     }
 
     // 提取真实视频
     const videos = [];
-    const matchInfo = match.matchInfo || {};
-
+    
+    // ========== 全场回放 ==========
     if (category === 'replay') {
-        // 全场回放 - 使用 replayNoteId
-        if (match.liveInfo && match.liveInfo.replayNoteId) {
-            const streams = await extractVideoStreams(match.liveInfo.replayNoteId, match.liveInfo.xsecToken || '');
+        // 优先使用 replayVideoInfo
+        const replayInfo = matchDetail?.replayVideoInfo || {};
+        if (replayInfo.noteId) {
+            const streams = await extractVideoStreams(
+                replayInfo.noteId, 
+                replayInfo.xsecToken || ''
+            );
             const url720 = select720P(streams);
             if (url720) {
                 videos.push('官方全场回放$' + url720);
-            } else {
-                videos.push('官方全场回放(暂无)$https://www.baidu.com');
             }
-        } else {
+        }
+        // 兼容旧逻辑：从 liveInfo.replayNoteId
+        else if (matchFromList.liveInfo && matchFromList.liveInfo.replayNoteId) {
+            const streams = await extractVideoStreams(
+                matchFromList.liveInfo.replayNoteId,
+                matchFromList.liveInfo.xsecToken || ''
+            );
+            const url720 = select720P(streams);
+            if (url720) {
+                videos.push('官方全场回放$' + url720);
+            }
+        }
+        
+        if (videos.length === 0) {
             videos.push('暂无回放$https://www.baidu.com');
         }
-    } else if (category === 'highlight') {
-        // 全场集锦 - 从 reportList 和 highList 筛选标题含"集锦"的
-        const allItems = [];
-
+    }
+    
+    // ========== 全场集锦 / 战报 / 高光时刻 ==========
+    else {
+        const matchInfo = matchDetail?.matchInfo || {};
         const reportList = matchInfo.reportList || [];
-        for (const item of reportList) {
-            if (item.type === 'video' && item.title && (item.title.indexOf('集锦') !== -1 || item.title.indexOf('高光') !== -1)) {
-                allItems.push(item);
-            }
-        }
-
         const highList = matchInfo.highList || [];
-        for (const item of highList) {
-            if (item.type === 'video' && item.title && (item.title.indexOf('集锦') !== -1 || item.title.indexOf('高光') !== -1)) {
-                allItems.push(item);
+        
+        let targetItems = [];
+        
+        if (category === 'highlight') {
+            // 集锦：从 reportList + highList 筛选标题含"集锦"的
+            for (const item of reportList) {
+                if (item.type === 'video' && item.title && 
+                    (item.title.indexOf('集锦') !== -1 || item.title.indexOf('高光') !== -1)) {
+                    targetItems.push(item);
+                }
             }
+            for (const item of highList) {
+                if (item.type === 'video' && item.title && 
+                    (item.title.indexOf('集锦') !== -1 || item.title.indexOf('高光') !== -1)) {
+                    targetItems.push(item);
+                }
+            }
+        } 
+        else if (category === 'report') {
+            // 战报：reportList 中所有 video
+            targetItems = reportList.filter(item => item.type === 'video' && item.noteId);
+        } 
+        else if (category === 'high') {
+            // 高光：highList 中所有 video
+            targetItems = highList.filter(item => item.type === 'video' && item.noteId);
         }
-
-        for (let i = 0; i < allItems.length; i++) {
-            const item = allItems[i];
+        
+        // 提取视频
+        for (let i = 0; i < targetItems.length; i++) {
+            const item = targetItems[i];
             const streams = await extractVideoStreams(item.noteId, item.xsecToken || '');
             const url720 = select720P(streams);
             if (url720) {
-                videos.push((item.title || '集锦' + (i + 1)) + '$' + url720);
+                videos.push((item.title || categoryNames[category] + (i + 1)) + '$' + url720);
             }
         }
-
+        
         if (videos.length === 0) {
-            videos.push('暂无集锦$https://www.baidu.com');
-        }
-    } else if (category === 'report') {
-        // 战报 - reportList 中所有 video
-        const reportList = matchInfo.reportList || [];
-        for (let i = 0; i < reportList.length; i++) {
-            const item = reportList[i];
-            if (item.type === 'video' && item.noteId) {
-                const streams = await extractVideoStreams(item.noteId, item.xsecToken || '');
-                const url720 = select720P(streams);
-                if (url720) {
-                    videos.push((item.title || '战报' + (i + 1)) + '$' + url720);
-                }
-            }
-        }
-        if (videos.length === 0) {
-            videos.push('暂无战报$https://www.baidu.com');
-        }
-    } else if (category === 'high') {
-        // 高光时刻 - highList 中所有 video
-        const highList = matchInfo.highList || [];
-        for (let i = 0; i < highList.length; i++) {
-            const item = highList[i];
-            if (item.type === 'video' && item.noteId) {
-                const streams = await extractVideoStreams(item.noteId, item.xsecToken || '');
-                const url720 = select720P(streams);
-                if (url720) {
-                    videos.push((item.title || '高光' + (i + 1)) + '$' + url720);
-                }
-            }
-        }
-        if (videos.length === 0) {
-            videos.push('暂无高光$https://www.baidu.com');
+            videos.push('暂无' + (categoryNames[category] || category) + '$https://www.baidu.com');
         }
     }
 
@@ -457,9 +448,8 @@ async function detail(id) {
             vod_content: homeTeam + ' ' + homeScore + ' - ' + awayScore + ' ' + awayTeam + '\n' +
                         '阶段: ' + round + '\n' +
                         (group ? '小组: ' + group + '\n' : '') +
-                        '时间: ' + dateLabel + '\n' +
                         '状态: ' + status,
-            vod_play_from: '小红书',
+            vod_play_from: '小红书2',
             vod_play_url: videos.join('#')
         }]
     });
