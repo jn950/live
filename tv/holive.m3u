@@ -37,7 +37,7 @@ http://116.228.170.214:9003/hls/48/index.m3u8
 http://116.228.170.214:9003/hls/50/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/动作电影.png" group-title="MO测试",动作电影
 http://116.228.170.214:9003/hls/51/index.m3u8
-#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/风云足球                             .png" group-title="MO测试",风云足球                             
+#EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/风云足球.png" group-title="MO测试",风云足球                             
 http://116.228.170.214:9003/hls/52/index.m3u8
 #EXTINF:-1 tvg-logo="http://raw.githubusercontent.com/jn950/live/refs/heads/main/tvlogo/央视台球.png" group-title="MO测试",央视台球
 http://116.228.170.214:9003/hls/53/index.m3u8
