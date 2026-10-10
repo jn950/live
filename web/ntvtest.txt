@@ -1,7 +1,12 @@
-测试频道,#genre#
-MOMO电台,webview://http://my9.ltd/momo-480.mp4
-YY83射雕,webview://https://wap.yy.com/1354210357
-虎牙阿斗,webview://https://www.huya.com/29982685
-斗鱼老阿西,webview://https://www.douyu.com/9494997
-B站青岛,webview://https://live.bilibili.com/h5/22570982
-B站直播,webview://https://live.bilibili.com/1728866898
+#EXTINF:-1 group-title="网络频道",MOMO电台
+webview://https://my9.ltd/momo-480.mp4
+#EXTINF:-1 group-title="网络频道",YY83射雕
+webview://https://wap.yy.com/1354210357
+#EXTINF:-1 group-title="网络频道",虎牙阿斗
+webview://https://www.huya.com/29982685
+#EXTINF:-1 group-title="网络频道",斗鱼阿西
+webview://https://www.douyu.com/9494997
+#EXTINF:-1 group-title="网络频道",B站青岛
+webview://https://live.bilibili.com/h5/22570982
+#EXTINF:-1 group-title="网络频道",凤凰官网
+webview://https://www.fengshows.com/live?tag=2
