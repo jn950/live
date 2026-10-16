@@ -1,0 +1,12 @@
+[
+  {
+    "name": "推荐源一 (holive 精选源)",
+    "url": "https://gh-proxy.org/https://raw.githubusercontent.com/jn950/live/main/tv/holive.m3u",
+    "desc": "M3U格式，包含央视、卫视精选及特色频道"
+  },
+  {
+    "name": "推荐源二 (IPv4 通用源)",
+    "url": "https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv4.txt",
+    "desc": "TXT格式，全国通用IPv4稳定线路"
+  }
+]
