@@ -3,55 +3,55 @@
   "groups": [
     {
       "id": "cctv_web",
-      "name": "央视网 · 央视",
+      "name": "央视网 · 央视2",
       "sourceType": "CCTV_WEB",
       "order": 1
     },
     {
       "id": "ysp_cctv",
-      "name": "央视频 · 央视",
+      "name": "央视频 · 央视2",
       "sourceType": "YSP_CCTV",
       "order": 2
     },
     {
       "id": "ysp_satellite",
-      "name": "央视频 · 卫视",
+      "name": "央视频 · 卫视2",
       "sourceType": "YSP_SATELLITE",
       "order": 3
     },
     {
       "id": "hunan",
-      "name": "湖南地方频道",
+      "name": "湖南地方频道2",
       "sourceType": "MGTV",
       "order": 4
     },
     {
       "id": "jiangsu",
-      "name": "江苏地方频道",
+      "name": "江苏地方频道2",
       "sourceType": "JSTV",
       "order": 5
     },
     {
       "id": "shanghai",
-      "name": "上海地方频道",
+      "name": "上海地方频道2",
       "sourceType": "KANKANEWS",
       "order": 6
     },
     {
       "id": "webview",
-      "name": "湖南地方网页",
+      "name": "湖南地方网页2",
       "sourceType": "WEBVIEW",
       "order": 7
     },
     {
       "id": "gdtv",
-      "name": "广东频道网页",
+      "name": "广东频道网页2",
       "sourceType": "WEBVIEW",
       "order": 8
     },
     {
       "id": "fengshows",
-      "name": "凤凰卫视网页",
+      "name": "凤凰卫视网页2",
       "sourceType": "WEBVIEW",
       "order": 9
     }
