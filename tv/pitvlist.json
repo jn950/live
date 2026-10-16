@@ -1,12 +1,1 @@
-[
-  {
-    "name": "推荐源一 (holive 精选源)",
-    "url": "https://gh-proxy.org/https://raw.githubusercontent.com/jn950/live/main/tv/holive.m3u",
-    "desc": "M3U格式，包含央视、卫视精选及特色频道"
-  },
-  {
-    "name": "推荐源二 (IPv4 通用源)",
-    "url": "https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv4.txt",
-    "desc": "TXT格式，全国通用IPv4稳定线路"
-  }
-]
+{"v":1,"alg":"A256GCM","iv":"k9+068XLEJGyKAq0","data":"OHCCWYzQ5/ehWJmtdAaLtjP/64B/9XqlC2qr4Vhzwa7NjKfoAs+0r55KFMGPEY2GYYFDfRbJhybqvg3xhHEvhgI8Kexmtou27f3bNVBMZhWxb74uxjdIXHfwyZYBZJ0dB/W6GwnpRArhuTfzDRVtJKqksGn56ZwQrUQvs40yPkc4tlaDERel8d1vuNbkDu/JOk5lorgQz3ZH7JAlP3oOUf9P6sM78v0q9HP2SsI9jRZiFUWs71SSQOS3wMdB/HVUYtEOKfFGUX14SdhmOKNqUUZlx3Aa7Icw5wnEfbQc+qu7+hs+FJ0+0zhHcvE2kpIorKaaY+CrlPGN1CQ62s7c3MLgB4xOElZf/TXZBWTBiOM5l8Br0rTu7X4YZU7U7l5SAilA33Bs+1Z97/Wyn7ccfCtcgVwlTY1bKBn8FIl24c+6r8IPgyEj3U+n3M42gzKjWTliMNq6dYvpGOnJXSPGrjJvxsZgB6/jIW81UeCKz2w02o7XHsO/fcsxVGCQ2rL48EFLDDTfv+j8t9kIyV+GdHOOaoxNx0I="}
