@@ -2,8 +2,336 @@
   "version": 2,
   "groups": [
     {
+      "name": "港台频道",
+      "channels": []
+    },
+    {
       "name": "🌴港澳台湾",
       "channels": [
+        {
+          "name": "AMAH",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://61.221.215.25:8800/hls/50/index.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "Amc电影台",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://61.221.215.25:8800/hls/43/index.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "Astro AEC",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://cdn.qd.je/163189/aec"
+            },
+            {
+              "name": "线路2",
+              "url": "https://cdn3.indevs.in/stream/live/aec/"
+            }
+          ]
+        },
+        {
+          "name": "Astro AOD",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://cdn3.indevs.in/stream/live/aod/"
+            }
+          ]
+        },
+        {
+          "name": "Astro 欢喜台",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://cdn3.indevs.in/stream/live/hxt/"
+            }
+          ]
+        },
+        {
+          "name": "BBC Earth",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://amg00793-amg00793c6-xumo-us-2669.playouts.now.amagi.tv/BBCStudios-BBCEarthA-hls/playlist540p.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "BeautifulLifeTV",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://5ddce30eb4b55.streamlock.net/bltvhd/bltv1/playlist.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "BOOMERANG",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://23.237.104.106:8080/USA_BOOMERANG/tracks-v1a1/mono.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "CGN中文台",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://d3e05csss9c272.cloudfront.net/out/v1/f0bf71c57581470fb9379f603e8f5d83/CGNWebLiveCN.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "Cinemax精选",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://23.237.104.106:8080/USA_MOREMAX/mono.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "CNR香港之声1-Voice of Hong Kong-Kowloon City",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://rthkradiocnrhk-live.akamaized.net/hls/live/2046111/radiocnrhk/master.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "Dali TV",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://www.dalitv.com.tw:4568/live/dali/index.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "GOOD2",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://live-350k.streamingfast.net/hls-live/goodtv/_definst_/liveevent/live-ch2-1.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "GOODTV",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://live-350k.streamingfast.net/hls-live/goodtv/_definst_/liveevent/live-ch1-1.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "HK第一台",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://rthkaudio1-lh.akamaihd.net/i/radio1_1@355864/master.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "HK普通话台",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://rthkaudio6-lh.akamaihd.net/i/radiopth_1@355869/master.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "Hope",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://tvhope.cdnvideo.ru/tvhope-pull/tvhope_1/playlist.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "HOY77",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://fast.hidns.vip/163189/hoy"
+            }
+          ]
+        },
+        {
+          "name": "HOY78",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://cdn.123.rr.kg/163189/hoy78"
+            },
+            {
+              "name": "线路2",
+              "url": "https://fast.hidns.vip/163189/hoy78"
+            }
+          ]
+        },
+        {
+          "name": "HOY国际财经台",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://cdn11.163189.xyz/163189/hoy76"
+            }
+          ]
+        },
+        {
+          "name": "Love Nature",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://bamus-lovenature-lg.amagi.tv/240p-cc/index.m3u8"
+            },
+            {
+              "name": "线路2",
+              "url": "https://bamus-lovenature-lg.amagi.tv/480p-cc/index.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "NBA1",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://23.237.104.106:8080/USA_NBA/tracks-v1a1/mono.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "NewsNOW",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://fox-foxnewsnow-samsungus.amagi.tv/playlist.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "NHK",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://61.221.215.25:8800/hls/51/index.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "NOW新闻台",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://173.208.234.146/live/nowxw.m3u8"
+            },
+            {
+              "name": "线路2",
+              "url": "http://psyl11.dyndns.tv:35451/live/axdynowtream/fSlawNmh15/23.ts"
+            },
+            {
+              "name": "线路3",
+              "url": "https://cdn.123.rr.kg/163189/now"
+            },
+            {
+              "name": "线路4",
+              "url": "https://fast.hidns.vip/163189/now"
+            }
+          ]
+        },
+        {
+          "name": "Pet Club TV",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://petclub-samsungaus.amagi.tv/playlist.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "RTHK31",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://fast.hidns.vip/163189/rthk31"
+            }
+          ]
+        },
+        {
+          "name": "RTHK32",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://fast.hidns.vip/163189/rthk32"
+            }
+          ]
+        },
+        {
+          "name": "SPOTISY",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://61.221.215.25:8800/hls/58/index.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "TITV",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://streamipcfapp.akamaized.net/live/_definst_/live_720/key_b1500.m3u8"
+            }
+          ]
+        },
         {
           "name": "TVB 开",
           "group": "🌴港澳台湾",
@@ -11,6 +339,26 @@
             {
               "name": "线路1",
               "url": "https://vdm6-hw.nbgdsygs.com/live/h6-2.flv"
+            }
+          ]
+        },
+        {
+          "name": "TVBPlus",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://cdn3.indevs.in/stream/tvb/tvbp/"
+            }
+          ]
+        },
+        {
+          "name": "TVBS Asia",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://38.64.72.148/hls/modn/list/4005/playlist.m3u8"
             }
           ]
         },
@@ -31,6 +379,234 @@
             {
               "name": "线路1",
               "url": "http://jnzq.ohoyee.com:9080/live/xingjiaoge-tvbsxw.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "TVBS亚洲",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://38.64.72.148/hls/modn/list/4005/chunklist0.m3u8"
+            },
+            {
+              "name": "线路2",
+              "url": "http://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index_5.m3u8"
+            },
+            {
+              "name": "线路3",
+              "url": "http://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index_5.m3u8?zshijd"
+            }
+          ]
+        },
+        {
+          "name": "TVB明珠",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://122.152.202.33/s/81a8a44f/index.m3u8?id=23"
+            }
+          ]
+        },
+        {
+          "name": "TVB无线新闻",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://122.152.202.33/s/81a8a44f/index.m3u8?id=21"
+            }
+          ]
+        },
+        {
+          "name": "TVB星河(多音轨字幕)",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://120.238.5.44:1698/hls/88/index.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "TVB星河",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://10.fast.hidns.vip/163189/xinghe/"
+            },
+            {
+              "name": "线路2",
+              "url": "https://cdn3.indevs.in/stream/live/tvbxh/"
+            }
+          ]
+        },
+        {
+          "name": "ViuTV",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://110.235.82.60:8001/bysid/99"
+            },
+            {
+              "name": "线路2",
+              "url": "https://10.fast.hidns.vip/163189/viu/"
+            }
+          ]
+        },
+        {
+          "name": "VIUTV",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://cdn.123.rr.kg/163189/viu"
+            }
+          ]
+        },
+        {
+          "name": "Viutv",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://turkmedya-live.ercdn.net/tv360/tv360.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "ViuTVsix",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://110.235.82.60:8001/bysid/96"
+            },
+            {
+              "name": "线路2",
+              "url": "http://beishan008.asuscomm.com:8889/bysid/96.m3u8"
+            },
+            {
+              "name": "线路3",
+              "url": "http://bziyunshao.synology.me:8889/bysid/96.m3u8"
+            },
+            {
+              "name": "线路4",
+              "url": "https://10.fast.hidns.vip/163189/viu6/"
+            }
+          ]
+        },
+        {
+          "name": "Wild TV",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://dfhsahpa45kk2.cloudfront.net/scheduler/scheduleMaster/476.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "ZOO MOO",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://zoomoo-samsungau.amagi.tv:443/playlist1080p.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "爱奇艺",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://cdn3.indevs.in/stream/live/iqiyi/"
+            }
+          ]
+        },
+        {
+          "name": "澳门莲花",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://cdn6.123.rr.kg/163189/amlh"
+            }
+          ]
+        },
+        {
+          "name": "八大第一",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://61.221.215.25:8800/hls/55/index.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "八大戏剧台",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://61.221.215.25:8800/hls/39/index.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "八大综合",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://61.221.215.25:8800/hls/56/index.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "半岛新闻",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://live-hls-web-aja.getaj.net/AJA/02.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "半岛新闻「阿拉伯」",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://live-hls-web-aja.getaj.net/AJA/02.m3u8?zshijd"
+            }
+          ]
+        },
+        {
+          "name": "本港台",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://222.217.243.197:8181/tsfile/live/1070_1.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "东莞新闻综合",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://stream.sun0769.com/dgrtv1/mp4tv1_1500/index.m3u8"
             }
           ]
         },
@@ -95,12 +671,46 @@
           ]
         },
         {
+          "name": "东森新闻",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://211.72.174.95:8138/0.ts"
+            }
+          ]
+        },
+        {
           "name": "东森中国台",
           "group": "🌴港澳台湾",
           "sources": [
             {
               "name": "线路1",
               "url": "http://38.64.72.148/hls/modn/list/2003/chunklist1.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "东阳影视生活",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://l.cztvcloud.com/channels/lantian/SXdongyang1/720p.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "東森超視美洲台",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://38.64.72.148/hls/modn/list/2013/chunklist0.m3u8"
+            },
+            {
+              "name": "线路2",
+              "url": "http://38.64.72.148/hls/modn/list/2013/playlist.m3u8"
             }
           ]
         },
@@ -163,16 +773,42 @@
           ]
         },
         {
+          "name": "动漫",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://61.221.215.25:8800/hls/40/index.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "动物世界",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://61.221.215.25:8800/hls/57/index.m3u8"
+            }
+          ]
+        },
+        {
           "name": "动物星球",
           "group": "🌴港澳台湾",
           "sources": [
             {
               "name": "线路1",
               "url": "http://61.221.215.25:8800/hls/57/index.m3u8?key=txiptv&playlive=1&authid=0"
-            },
+            }
+          ]
+        },
+        {
+          "name": "俄罗斯频",
+          "group": "🌴港澳台湾",
+          "sources": [
             {
-              "name": "线路2",
-              "url": "http://61.221.215.25:8800/hls/57/index.m3u8"
+              "name": "线路1",
+              "url": "https://rt-glb.rttv.com/dvr/rtnews/playlist_4500Kb.m3u8"
             }
           ]
         },
@@ -193,6 +829,14 @@
               "url": "http://120.198.86.186:9901/tsfile/live/1007_1.m3u8?key=txiptv&playlive=1&authid=0"
             },
             {
+              "name": "线路4",
+              "url": "http://120.198.95.220:9901/tsfile/live/1004_1.m3u8?key=txiptv"
+            },
+            {
+              "name": "线路5",
+              "url": "http://122.152.202.33/s/81a8a44f/index.m3u8?id=53"
+            },
+            {
               "name": "线路6",
               "url": "http://211.97.63.3:3443/hls/541/index.m3u8"
             },
@@ -201,13 +845,183 @@
               "url": "http://222.128.55.152:9080/live/gdfc.m3u8"
             },
             {
+              "name": "线路8",
+              "url": "http://110.235.82.60:8001/bysid/1"
+            },
+            {
               "name": "线路9",
               "url": "http://gd.wsd.gd.cn:1698/hls/92/index.m3u8"
+            },
+            {
+              "name": "线路10",
+              "url": "http://o11.163189.xyz/stream/tvb/fct4k/"
+            },
+            {
+              "name": "线路11",
+              "url": "https://cdn3.indevs.in/stream/tvb/fct/"
+            },
+            {
+              "name": "线路12",
+              "url": "https://epg.pw/stream/b1bedc34e0cd84c712106b10fa7bd2055a46898678c37e35aebe43290c2c8a1f.m3u8"
             }
           ]
         },
         {
-          "name": "音乐",
+          "name": "翡翠台4K",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://cdn3.indevs.in/stream/tvb/fct4k/"
+            },
+            {
+              "name": "线路2",
+              "url": "https://cdn3.indevs.in/stream/tvb/fct4k/stream_0.php"
+            }
+          ]
+        },
+        {
+          "name": "凤凰卫视",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://122.152.202.33/s/81a8a44f/index.m3u8?id=15"
+            }
+          ]
+        },
+        {
+          "name": "凤凰香港 高清",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://222.217.243.197:8181/tsfile/live/1002_1.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "凤凰香港",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://122.152.202.33/s/81a8a44f/index.m3u8?id=fhhk TVB"
+            },
+            {
+              "name": "线路2",
+              "url": "http://122.152.202.33/s/81a8a44f/index.m3u8?id=fhhk"
+            },
+            {
+              "name": "线路3",
+              "url": "http://43.152.224.209/qctv.fengshows.cn/live/0701phk72.flv"
+            },
+            {
+              "name": "线路4",
+              "url": "http://43.152.224.209/qctv.fengshows.cn/live/0701phk72.m3u8"
+            },
+            {
+              "name": "线路5",
+              "url": "http://bobohome.ignorelist.com:20247/fengshows?id=3.m3u8"
+            },
+            {
+              "name": "线路6",
+              "url": "http://cdn6.123.rr.kg/163189/fhhk"
+            }
+          ]
+        },
+        {
+          "name": "凤凰中文",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://222.217.243.197:8181/tsfile/live/1014_1.m3u8"
+            },
+            {
+              "name": "线路2",
+              "url": "http://playtv-live.ifeng.com/live/06OLEGEGM4G_audio.m3u8"
+            },
+            {
+              "name": "线路3",
+              "url": "http://183.237.95.108:9901/tsfile/live/1103_1.m3u8?key=txiptv&playlive=0&authid=0"
+            },
+            {
+              "name": "线路4",
+              "url": "http://219.145.93.74:10000/tsfile/live/1002_1.m3u8?key=txiptv&playlive=1&authid=0$陕西电信酒店"
+            },
+            {
+              "name": "线路5",
+              "url": "http://156.238.224.170:7001/fhx.php?id=cn"
+            },
+            {
+              "name": "线路6",
+              "url": "http://173.208.234.146/live/fhzw.m3u8"
+            },
+            {
+              "name": "线路7",
+              "url": "http://43.152.224.209/qctv.fengshows.cn/live/0701pcc72.flv"
+            },
+            {
+              "name": "线路8",
+              "url": "http://bobohome.ignorelist.com:20247/fengshows?id=2.m3u8"
+            },
+            {
+              "name": "线路9",
+              "url": "http://playtv-live.ifeng.com/live/06OLEGEGM4G.m3u8"
+            },
+            {
+              "name": "线路10",
+              "url": "http://playtv-live.ifeng.com/live/06OLEGEGM4G_audio.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "凤凰资讯",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://222.217.243.197:8181/tsfile/live/1015_1.m3u8"
+            },
+            {
+              "name": "线路2",
+              "url": "http://playtv-live.ifeng.com/live/06OLEEWQKN4_audio.m3u8"
+            },
+            {
+              "name": "线路3",
+              "url": "http://43.152.224.209/qctv.fengshows.cn/live/0701pin72.flv"
+            },
+            {
+              "name": "线路4",
+              "url": "http://bobohome.ignorelist.com:20247/fengshows?id=1.m3u8"
+            },
+            {
+              "name": "线路5",
+              "url": "http://playtv-live.ifeng.com/live/06OLEEWQKN4.m3u8"
+            },
+            {
+              "name": "线路6",
+              "url": "http://playtv-live.ifeng.com/live/06OLEEWQKN4_audio.m3u8"
+            },
+            {
+              "name": "线路7",
+              "url": "https://playtv-live.ifeng.com/live/06OLEEWQKN4.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "鳳凰資訊臺",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://173.208.234.146/live/fhzx.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "钢琴音乐",
           "group": "🌴港澳台湾",
           "sources": [
             {
@@ -223,6 +1037,184 @@
             {
               "name": "线路1",
               "url": "http://211.72.174.95:8116/0.ts"
+            }
+          ]
+        },
+        {
+          "name": "广东体育",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://2.fast.hidns.vip/163189/gdty"
+            }
+          ]
+        },
+        {
+          "name": "广东珠江",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://2.fast.hidns.vip/163189/gdzj"
+            }
+          ]
+        },
+        {
+          "name": "广州南国都市",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://cdn15.163189.xyz/163189/ngds"
+            },
+            {
+              "name": "线路2",
+              "url": "https://tencentplay.gztv.com/live/nanguodushi.m3u8?txSecret=550af55c0ea34ce492748481415b6dfa&txTime=1903e7b17de"
+            }
+          ]
+        },
+        {
+          "name": "广州新闻",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://168.sryze.cc/163189/gzxw"
+            },
+            {
+              "name": "线路2",
+              "url": "https://tencentplay.gztv.com/live/xinwen.m3u8?txSecret=4c09e8c2d093bcb692e036ae54ff87c7&txTime=1903e37cd8a"
+            }
+          ]
+        },
+        {
+          "name": "广州综合",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://168.sryze.cc/163189/gzzh"
+            },
+            {
+              "name": "线路2",
+              "url": "https://tencentplay.gztv.com/live/zonghes.m3u8?txSecret=9e5008d4b91944fa76a957a93ae54870&txTime=1903e5f1cfd"
+            }
+          ]
+        },
+        {
+          "name": "海峡卫视",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://168.sryze.cc/163189/hxws"
+            }
+          ]
+        },
+        {
+          "name": "韩国新闻[1280*720]",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://amdlive.ctnd.com.edgesuite.net:80/arirang_1ch/smil:arirang_1ch.smil/chunklist_b2256000_sleng.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "漢天衛視",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://38.64.72.148/hls/modn/list/4025/chunklist0.m3u8"
+            },
+            {
+              "name": "线路2",
+              "url": "http://38.64.72.148/hls/modn/list/4025/chunklist1.m3u8"
+            },
+            {
+              "name": "线路3",
+              "url": "http://38.64.72.148/hls/modn/list/4025/playlist.m3u8"
+            },
+            {
+              "name": "线路4",
+              "url": "http://38.64.72.148:80/hls/modn/list/4025/chunklist0.m3u8"
+            },
+            {
+              "name": "线路5",
+              "url": "http://38.64.72.148:80/hls/modn/list/4025/chunklist1.m3u8"
+            },
+            {
+              "name": "线路6",
+              "url": "http://38.64.72.148:80/hls/modn/list/4025/playlist.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "好消息综合台",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://dqhxk7sbp7xog.cloudfront.net/hls-live/goodtv/_definst_/liveevent/live-ch1-2.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "红牛REDBULL TV",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_3360.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "华藏卫视",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://61.216.67.119:1935/HZTV/HZTV/chunklist.m3u8"
+            },
+            {
+              "name": "线路2",
+              "url": "http://61.216.67.119:1935/HZTV/HZTV/chunklist_w1827568404.m3u8"
+            },
+            {
+              "name": "线路3",
+              "url": "http://61.216.67.119:1935/HZTV/HZTV/playlist.m3u8"
+            },
+            {
+              "name": "线路4",
+              "url": "https://5ddce30eb4b55.streamlock.net/HZTV/HZTV/playlist.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "华丽翡翠台(新加坡)",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://cdn3.indevs.in/stream/live/jade/"
+            }
+          ]
+        },
+        {
+          "name": "华丽翡翠台",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://cdn3.indevs.in/stream/live/hlt/"
+            },
+            {
+              "name": "线路2",
+              "url": "https://cdn3.indevs.in/stream/live/hlt/stream_0.php?u=admin&p=69fe3eb1f0b037bc2479cb4fbd56551848343f071f939422ef250f04f68b4cee&uid="
             }
           ]
         },
@@ -271,6 +1263,136 @@
           ]
         },
         {
+          "name": "寰宇新聞台",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://bak.dou.ddns-ip.net/api.php?n=HKTV&id=JP9JTo&tk=B9eddFxBG9JM"
+            }
+          ]
+        },
+        {
+          "name": "黃金華劇台",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://bak.dou.ddns-ip.net/api.php?n=xxxtw&id=Y9kdAm&tk=SLK5QjnsRiya"
+            }
+          ]
+        },
+        {
+          "name": "靖远电视台",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://play.kankanlive.com/live/1658390970673988.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "静宁新闻综合",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://play.kankanlive.com/live/1658194434596952.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "老澳门直播",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://vdm6-ali.hrypl168.com/live/a6.flv"
+            }
+          ]
+        },
+        {
+          "name": "莲花卫视",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://8.138.7.223/tv/lotustv.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "龙华电影",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://8.fast.hidns.vip/163189/lhdy"
+            }
+          ]
+        },
+        {
+          "name": "龙华经典",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://8.fast.hidns.vip/163189/lhjd"
+            }
+          ]
+        },
+        {
+          "name": "龙华卡通",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://8.fast.hidns.vip/163189/lhkt"
+            }
+          ]
+        },
+        {
+          "name": "龙华偶像",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://8.fast.hidns.vip/163189/lhox"
+            }
+          ]
+        },
+        {
+          "name": "龙华日韩",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://8.fast.hidns.vip/163189/lhrh"
+            }
+          ]
+        },
+        {
+          "name": "龙华戏剧",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://8.fast.hidns.vip/163189/lhxj"
+            }
+          ]
+        },
+        {
+          "name": "龙华洋片",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://8.fast.hidns.vip/163189/lhyp"
+            }
+          ]
+        },
+        {
           "name": "民视新闻",
           "group": "🌴港澳台湾",
           "sources": [
@@ -311,7 +1433,48 @@
             {
               "name": "线路4",
               "url": "http://beishan008.asuscomm.com:8890/bysid/2.m3u8"
+            },
+            {
+              "name": "线路5",
+              "url": "http://bziyunshao.synology.me:8890/bysid/2"
+            },
+            {
+              "name": "线路6",
+              "url": "https://cdn3.indevs.in/stream/tvb/mzt/"
             }
+          ]
+        },
+        {
+          "name": "千禧经典台",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://cdn3.indevs.in/stream/live/tvbc/"
+            }
+          ]
+        },
+        {
+          "name": "人间卫视",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://61.216.67.119:1935/bltvhd/bltv1/chunklist_w1266569526.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "人間衛視",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://61.216.67.119:1935/bltvhd/bltv1/chunklist_w1266569526.m3u"
+            },
+            {
+              "name": "线路2",
+              "url": "https://5ddce30eb4b55.streamlock.net/bltvhd/bltv1/chunklist_w511254805.m3u8"
             }
           ]
         },
@@ -330,12 +1493,36 @@
           ]
         },
         {
-          "name": "中视",
+          "name": "邵氏电影",
           "group": "🌴港澳台湾",
           "sources": [
             {
               "name": "线路1",
-              "url": "http://211.72.174.95:8113/0.ts"
+              "url": "http://38.75.136.137:98/gslb/dsdqpub/lbssdy.m3u8?auth=testpub"
+            }
+          ]
+        },
+        {
+          "name": "邵氏动作",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://38.75.136.137:98/gslb/dsdqpub/lbssdz.m3u8?auth=testpub"
+            }
+          ]
+        },
+        {
+          "name": "生命电视",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://61.216.67.119:1935/lifetv/lifetv.stream/manifest.m3u8"
+            },
+            {
+              "name": "线路2",
+              "url": "https://5ddce30eb4b55.streamlock.net/lifetv/lifetv.stream/playlist.m3u8"
             }
           ]
         },
@@ -360,6 +1547,114 @@
             {
               "name": "线路2",
               "url": "http://38.64.72.148:80/hls/modn/list/4013/chunklist1.m3u8"
+            },
+            {
+              "name": "线路3",
+              "url": "https://live.wcetv.com/hls/m3u8/ttvnews.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "台湾华视主频",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://4g.158.qzz.io/163189/hs"
+            }
+          ]
+        },
+        {
+          "name": "台湾民视主频",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://37.27.111.214:8080/live/4/hls.m3u8"
+            },
+            {
+              "name": "线路2",
+              "url": "http://37.27.111.214:8080/live/5/hls.m3u8"
+            },
+            {
+              "name": "线路3",
+              "url": "http://37.27.111.214:8080/live/6/hls.m3u8"
+            },
+            {
+              "name": "线路4",
+              "url": "https://4g.158.qzz.io/163189/ms"
+            }
+          ]
+        },
+        {
+          "name": "台湾中视主频",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://37.27.111.214:8080/live/7/hls.m3u8"
+            },
+            {
+              "name": "线路2",
+              "url": "https://4g.158.qzz.io/163189/zs"
+            }
+          ]
+        },
+        {
+          "name": "天映经典",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://cdn3.indevs.in/stream/live/ccm/"
+            }
+          ]
+        },
+        {
+          "name": "天映频道",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://cdn3.indevs.in/stream/live/typd/"
+            }
+          ]
+        },
+        {
+          "name": "天映新加坡",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://10.fast.hidns.vip/163189/typd/"
+            }
+          ]
+        },
+        {
+          "name": "唯心",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://5ddce30eb4b55.streamlock.net/wxtv/wxtvnow.stream/playlist.m3u8"
+            },
+            {
+              "name": "线路2",
+              "url": "https://mobile.ccdntech.com/transcoder/_definst_/vod164_Live/live/chunklist_w1177047531.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "唯心电视",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://mobile.ccdntech.com/transcoder/_definst_/vod164_Live/live/chunklist_w1177047531.m3u8"
+            },
+            {
+              "name": "线路2",
+              "url": "http://mobile.ccdntech.com/transcoder/_definst_/vod164_Live/live/playlist.m3u8"
             }
           ]
         },
@@ -384,40 +1679,50 @@
           ]
         },
         {
+          "name": "无线新闻",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://cdn6.123.rr.kg/163189/wxxw"
+            },
+            {
+              "name": "线路2",
+              "url": "https://cdn6.123.rr.kg/163189/wxxwt"
+            }
+          ]
+        },
+        {
+          "name": "无线新闻台",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://bziyunshao.synology.me:8890/bysid/83"
+            },
+            {
+              "name": "线路2",
+              "url": "http://bziyunshao.synology.me:8890/bysid/83.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "五星体育",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://cdn15.163189.xyz/163189/wxty"
+            }
+          ]
+        },
+        {
           "name": "悟道法师",
           "group": "🌴港澳台湾",
           "sources": [
             {
               "name": "线路1",
               "url": "https://tw2.amtb.de/liveedge/_definst_/smil:wdmaster.smil/playlist.m3u8"
-            }
-          ]
-        },
-        {
-          "name": "人間衛視",
-          "group": "🌴港澳台湾",
-          "sources": [
-            {
-              "name": "线路1",
-              "url": "http://61.216.67.119:1935/bltvhd/bltv1/chunklist_w1266569526.m3u"
-            },
-            {
-              "name": "线路2",
-              "url": "https://5ddce30eb4b55.streamlock.net/bltvhd/bltv1/chunklist_w511254805.m3u8"
-            }
-          ]
-        },
-        {
-          "name": "唯心电视",
-          "group": "🌴港澳台湾",
-          "sources": [
-            {
-              "name": "线路1",
-              "url": "http://mobile.ccdntech.com/transcoder/_definst_/vod164_Live/live/chunklist_w1177047531.m3u8"
-            },
-            {
-              "name": "线路2",
-              "url": "http://mobile.ccdntech.com/transcoder/_definst_/vod164_Live/live/playlist.m3u8"
             }
           ]
         },
@@ -438,6 +1743,96 @@
             {
               "name": "线路1",
               "url": "http://ottproxy2.ist.ooo/livehls/MOB-U1-NO/index.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "香港電台(RTHK 34)",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://news.cgtn.com/resource/live/document/cgtn-doc.m3u8#https://livedoc.cgtn.com/1000d/prog_index.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "香港電台第五台 – RTHK Radio 5 – Kowloon HK",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://rthkradio5-live.akamaized.net/hls/live/2040081/radio5/master.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "香港佛陀",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://sg1.amtb.de/liveedge/_definst_/smil:livetv.smil/chunklist_w1071093527_b828000.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "香港面包台",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://video.bread-tv.com:8091/hls-live24/online/index.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "香港卫视",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://hkstv.tv/api/m3u8-proxy?url=http%3A%2F%2Fwebcast.hkstv.tv%2Flivestream%2Fmutfysrq%2Fplaylist.m3u8"
+            },
+            {
+              "name": "线路2",
+              "url": "http://player.cntv.cn/standard/live_HLSDRM20180606.swf?ChannelID=xianggangweishi&P2PChannelID=pd://cctv_p2p_hdxianggangweishi"
+            },
+            {
+              "name": "线路3",
+              "url": "http://webcast.hkstv.tv/livestream/mutfysrq/playlist.m3u8"
+            },
+            {
+              "name": "线路4",
+              "url": "https://webcast.hkstv.tv/livestream/mutfysrq/playlist.m3u8"
+            },
+            {
+              "name": "线路5",
+              "url": "https://webcast.hkstv.tv/livestream/mutfysrq/playlist.m3u8?hls_ctx=8o89406w"
+            },
+            {
+              "name": "线路6",
+              "url": "https://piccpndali.v.myalicdn.com/audio/xianggangweishi_2.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "新唐人",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://ntd02.akamaized.net/HD-NY/tracks-v3a1/mono.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "星河台",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://183.237.240.235:808/hls/121/index.m3u8"
             }
           ]
         },
@@ -494,9 +1889,81 @@
           ]
         },
         {
+          "name": "有线新闻",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://61.10.2.134:80/live_freedirect/freehd209_h.live/chunklist.m3u8"
+            },
+            {
+              "name": "线路2",
+              "url": "http://61.10.2.140/live_freedirect/freehd209_h.live/playlist.m3u8"
+            },
+            {
+              "name": "线路3",
+              "url": "http://61.10.2.140/live_freedirect/opentvhd002_h.live/playlist.m3u8"
+            },
+            {
+              "name": "线路4",
+              "url": "http://61.10.2.140:80/live_freedirect/freehd209_h.live/chunklist_w135209556.m3u8"
+            },
+            {
+              "name": "线路5",
+              "url": "http://61.10.2.141/live_freedirect/freehd209_h.live/playlist.m3u"
+            },
+            {
+              "name": "线路6",
+              "url": "http://61.10.2.141/live_freedirect/freehd209_h.live/playlist.m3u8"
+            },
+            {
+              "name": "线路7",
+              "url": "http://61.10.2.141/live_freedirect/hd110_h.live/playlist.m3u8"
+            },
+            {
+              "name": "线路8",
+              "url": "http://61.10.2.141:80/live_freedirect/freehd209_h.live/chunklist.m3u8"
+            },
+            {
+              "name": "线路9",
+              "url": "http://61.10.2.151:80/live_freedirect/freehd209_h.live/chunklist_w1201085709.m3u8"
+            },
+            {
+              "name": "线路10",
+              "url": "http://cm61-10-2-140.hkcable.com.hk/live_freedirect/freehd209_h.live/chunklist_w135209556.m3u8"
+            },
+            {
+              "name": "线路11",
+              "url": "http://cm61-10-2-143.hkcable.com.hk/live_freedirect/freehd209_h.live/chunklist_w1949275579.m3u8"
+            },
+            {
+              "name": "线路12",
+              "url": "http://cm61-10-2-143.hkcable.com.hk/live_freedirect/freehd209_h.live/playlist.m3u8"
+            },
+            {
+              "name": "线路13",
+              "url": "http://cm61-10-2-143.hkcable.com.hk/live_freedirect/hd110_h.live/playlist.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "娛樂新聞台",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://bak.dou.ddns-ip.net/api.php?n=xxxtw&id=OwCNvU&tk=SLK5QjnsRiya"
+            }
+          ]
+        },
+        {
           "name": "中國環球電視網紀錄頻道",
           "group": "🌴港澳台湾",
           "sources": [
+            {
+              "name": "线路1",
+              "url": "https://english-liveali.cgtn.com/hls/yypdjlctzb/playlist.m3u8"
+            },
             {
               "name": "线路2",
               "url": "https://english-liveali.cgtn.com/hls/yypdjlctzb/yypdjlctzbcd/playlist.m3u8"
@@ -512,6 +1979,16 @@
           ]
         },
         {
+          "name": "中视",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://211.72.174.95:8113/0.ts"
+            }
+          ]
+        },
+        {
           "name": "中天新闻",
           "group": "🌴港澳台湾",
           "sources": [
@@ -522,6 +1999,24 @@
             {
               "name": "线路2",
               "url": "http://222.128.55.152:9080/live/fc.m3u8"
+            },
+            {
+              "name": "线路3",
+              "url": "http://jnzq.ohoyee.com:9080/live/xingjiaoge-ztxw2.m3u8"
+            },
+            {
+              "name": "线路4",
+              "url": "http://xiangxiws.vip:6777/qlw.php?key=qq%E7%BE%A4746405779&id=ztxw"
+            }
+          ]
+        },
+        {
+          "name": "中天新聞台",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://bak.dou.ddns-ip.net/api.php?n=HKTV&id=G8vMmy&tk=B9eddFxBG9JM"
             }
           ]
         },
@@ -531,71 +2026,37 @@
           "sources": [
             {
               "name": "线路1",
+              "url": "http://61.221.215.25:8800/hls/47/index.m3u8"
+            },
+            {
+              "name": "线路2",
               "url": "http://61.221.215.25:8800/hls/47/index.m3u8?key=txiptv&playlive=1&authid=0"
             }
           ]
         },
         {
-          "name": "BeautifulLifeTV",
+          "name": "中旺電視",
           "group": "🌴港澳台湾",
           "sources": [
             {
               "name": "线路1",
-              "url": "https://5ddce30eb4b55.streamlock.net/bltvhd/bltv1/playlist.m3u8"
-            }
-          ]
-        },
-        {
-          "name": "GOOD2",
-          "group": "🌴港澳台湾",
-          "sources": [
-            {
-              "name": "线路1",
-              "url": "http://live-350k.streamingfast.net/hls-live/goodtv/_definst_/liveevent/live-ch2-1.m3u8"
-            }
-          ]
-        },
-        {
-          "name": "GOODTV",
-          "group": "🌴港澳台湾",
-          "sources": [
-            {
-              "name": "线路1",
-              "url": "http://live-350k.streamingfast.net/hls-live/goodtv/_definst_/liveevent/live-ch1-1.m3u8"
-            }
-          ]
-        },
-        {
-          "name": "HK第一台",
-          "group": "🌴港澳台湾",
-          "sources": [
-            {
-              "name": "线路1",
-              "url": "https://rthkaudio1-lh.akamaihd.net/i/radio1_1@355864/master.m3u8"
-            }
-          ]
-        },
-        {
-          "name": "Hope",
-          "group": "🌴港澳台湾",
-          "sources": [
-            {
-              "name": "线路1",
-              "url": "http://tvhope.cdnvideo.ru/tvhope-pull/tvhope_1/playlist.m3u8"
-            }
-          ]
-        },
-        {
-          "name": "Love Nature",
-          "group": "🌴港澳台湾",
-          "sources": [
-            {
-              "name": "线路1",
-              "url": "https://bamus-lovenature-lg.amagi.tv/240p-cc/index.m3u8"
+              "url": "http://38.64.72.148/hls/modn/list/4010/chunklist0.m3u8"
             },
             {
               "name": "线路2",
-              "url": "https://bamus-lovenature-lg.amagi.tv/480p-cc/index.m3u8"
+              "url": "http://38.64.72.148/hls/modn/list/4010/chunklist1.m3u8"
+            },
+            {
+              "name": "线路3",
+              "url": "http://38.64.72.148/hls/modn/list/4010/playlist.m3u8"
+            },
+            {
+              "name": "线路4",
+              "url": "http://38.64.72.148:80/hls/modn/list/4010/chunklist0.m3u8"
+            },
+            {
+              "name": "线路5",
+              "url": "http://38.64.72.148:80/hls/modn/list/4010/playlist.m3u8"
             }
           ]
         },
