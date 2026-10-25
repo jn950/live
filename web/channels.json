@@ -5,70 +5,6 @@
       "name": "🌴港澳台湾",
       "channels": [
         {
-          "name": "BeautifulLifeTV",
-          "group": "🌴港澳台湾",
-          "sources": [
-            {
-              "name": "线路1",
-              "url": "https://5ddce30eb4b55.streamlock.net/bltvhd/bltv1/playlist.m3u8"
-            }
-          ]
-        },
-        {
-          "name": "GOOD2",
-          "group": "🌴港澳台湾",
-          "sources": [
-            {
-              "name": "线路1",
-              "url": "http://live-350k.streamingfast.net/hls-live/goodtv/_definst_/liveevent/live-ch2-1.m3u8"
-            }
-          ]
-        },
-        {
-          "name": "GOODTV",
-          "group": "🌴港澳台湾",
-          "sources": [
-            {
-              "name": "线路1",
-              "url": "http://live-350k.streamingfast.net/hls-live/goodtv/_definst_/liveevent/live-ch1-1.m3u8"
-            }
-          ]
-        },
-        {
-          "name": "HK第一台",
-          "group": "🌴港澳台湾",
-          "sources": [
-            {
-              "name": "线路1",
-              "url": "https://rthkaudio1-lh.akamaihd.net/i/radio1_1@355864/master.m3u8"
-            }
-          ]
-        },
-        {
-          "name": "Hope",
-          "group": "🌴港澳台湾",
-          "sources": [
-            {
-              "name": "线路1",
-              "url": "http://tvhope.cdnvideo.ru/tvhope-pull/tvhope_1/playlist.m3u8"
-            }
-          ]
-        },
-        {
-          "name": "Love Nature",
-          "group": "🌴港澳台湾",
-          "sources": [
-            {
-              "name": "线路1",
-              "url": "https://bamus-lovenature-lg.amagi.tv/240p-cc/index.m3u8"
-            },
-            {
-              "name": "线路2",
-              "url": "https://bamus-lovenature-lg.amagi.tv/480p-cc/index.m3u8"
-            }
-          ]
-        },
-        {
           "name": "TVB 开",
           "group": "🌴港澳台湾",
           "sources": [
@@ -257,14 +193,6 @@
               "url": "http://120.198.86.186:9901/tsfile/live/1007_1.m3u8?key=txiptv&playlive=1&authid=0"
             },
             {
-              "name": "线路4",
-              "url": "http://120.198.95.220:9901/tsfile/live/1004_1.m3u8?key=txiptv"
-            },
-            {
-              "name": "线路5",
-              "url": "http://122.152.202.33/s/81a8a44f/index.m3u8?id=53"
-            },
-            {
               "name": "线路6",
               "url": "http://211.97.63.3:3443/hls/541/index.m3u8"
             },
@@ -273,139 +201,13 @@
               "url": "http://222.128.55.152:9080/live/gdfc.m3u8"
             },
             {
-              "name": "线路8",
-              "url": "http://110.235.82.60:8001/bysid/1"
-            },
-            {
               "name": "线路9",
               "url": "http://gd.wsd.gd.cn:1698/hls/92/index.m3u8"
-            },
-            {
-              "name": "线路10",
-              "url": "http://o11.163189.xyz/stream/tvb/fct4k/"
-            },
-            {
-              "name": "线路11",
-              "url": "https://cdn3.indevs.in/stream/tvb/fct/"
-            },
-            {
-              "name": "线路12",
-              "url": "https://epg.pw/stream/b1bedc34e0cd84c712106b10fa7bd2055a46898678c37e35aebe43290c2c8a1f.m3u8"
             }
           ]
         },
         {
-          "name": "凤凰香港",
-          "group": "🌴港澳台湾",
-          "sources": [
-            {
-              "name": "线路1",
-              "url": "http://122.152.202.33/s/81a8a44f/index.m3u8?id=fhhk TVB"
-            },
-            {
-              "name": "线路2",
-              "url": "http://122.152.202.33/s/81a8a44f/index.m3u8?id=fhhk"
-            },
-            {
-              "name": "线路3",
-              "url": "http://43.152.224.209/qctv.fengshows.cn/live/0701phk72.flv"
-            },
-            {
-              "name": "线路4",
-              "url": "http://43.152.224.209/qctv.fengshows.cn/live/0701phk72.m3u8"
-            },
-            {
-              "name": "线路5",
-              "url": "http://bobohome.ignorelist.com:20247/fengshows?id=3.m3u8"
-            },
-            {
-              "name": "线路6",
-              "url": "http://cdn6.123.rr.kg/163189/fhhk"
-            }
-          ]
-        },
-        {
-          "name": "凤凰中文",
-          "group": "🌴港澳台湾",
-          "sources": [
-            {
-              "name": "线路1",
-              "url": "http://222.217.243.197:8181/tsfile/live/1014_1.m3u8"
-            },
-            {
-              "name": "线路2",
-              "url": "http://playtv-live.ifeng.com/live/06OLEGEGM4G_audio.m3u8"
-            },
-            {
-              "name": "线路3",
-              "url": "http://183.237.95.108:9901/tsfile/live/1103_1.m3u8?key=txiptv&playlive=0&authid=0"
-            },
-            {
-              "name": "线路4",
-              "url": "http://219.145.93.74:10000/tsfile/live/1002_1.m3u8?key=txiptv&playlive=1&authid=0$陕西电信酒店"
-            },
-            {
-              "name": "线路5",
-              "url": "http://156.238.224.170:7001/fhx.php?id=cn"
-            },
-            {
-              "name": "线路6",
-              "url": "http://173.208.234.146/live/fhzw.m3u8"
-            },
-            {
-              "name": "线路7",
-              "url": "http://43.152.224.209/qctv.fengshows.cn/live/0701pcc72.flv"
-            },
-            {
-              "name": "线路8",
-              "url": "http://bobohome.ignorelist.com:20247/fengshows?id=2.m3u8"
-            },
-            {
-              "name": "线路9",
-              "url": "http://playtv-live.ifeng.com/live/06OLEGEGM4G.m3u8"
-            },
-            {
-              "name": "线路10",
-              "url": "http://playtv-live.ifeng.com/live/06OLEGEGM4G_audio.m3u8"
-            }
-          ]
-        },
-        {
-          "name": "凤凰资讯",
-          "group": "🌴港澳台湾",
-          "sources": [
-            {
-              "name": "线路1",
-              "url": "http://222.217.243.197:8181/tsfile/live/1015_1.m3u8"
-            },
-            {
-              "name": "线路2",
-              "url": "http://playtv-live.ifeng.com/live/06OLEEWQKN4_audio.m3u8"
-            },
-            {
-              "name": "线路3",
-              "url": "http://43.152.224.209/qctv.fengshows.cn/live/0701pin72.flv"
-            },
-            {
-              "name": "线路4",
-              "url": "http://bobohome.ignorelist.com:20247/fengshows?id=1.m3u8"
-            },
-            {
-              "name": "线路5",
-              "url": "http://playtv-live.ifeng.com/live/06OLEEWQKN4.m3u8"
-            },
-            {
-              "name": "线路6",
-              "url": "http://playtv-live.ifeng.com/live/06OLEEWQKN4_audio.m3u8"
-            },
-            {
-              "name": "线路7",
-              "url": "https://playtv-live.ifeng.com/live/06OLEEWQKN4.m3u8"
-            }
-          ]
-        },
-        {
-          "name": "钢琴音乐",
+          "name": "音乐",
           "group": "🌴港澳台湾",
           "sources": [
             {
@@ -509,38 +311,7 @@
             {
               "name": "线路4",
               "url": "http://beishan008.asuscomm.com:8890/bysid/2.m3u8"
-            },
-            {
-              "name": "线路5",
-              "url": "http://bziyunshao.synology.me:8890/bysid/2"
-            },
-            {
-              "name": "线路6",
-              "url": "https://cdn3.indevs.in/stream/tvb/mzt/"
             }
-          ]
-        },
-        {
-          "name": "人间卫视",
-          "group": "🌴港澳台湾",
-          "sources": [
-            {
-              "name": "线路1",
-              "url": "http://61.216.67.119:1935/bltvhd/bltv1/chunklist_w1266569526.m3u8"
-            }
-          ]
-        },
-        {
-          "name": "人間衛視",
-          "group": "🌴港澳台湾",
-          "sources": [
-            {
-              "name": "线路1",
-              "url": "http://61.216.67.119:1935/bltvhd/bltv1/chunklist_w1266569526.m3u"
-            },
-            {
-              "name": "线路2",
-              "url": "https://5ddce30eb4b55.streamlock.net/bltvhd/bltv1/chunklist_w511254805.m3u8"
             }
           ]
         },
@@ -555,6 +326,16 @@
             {
               "name": "线路2",
               "url": "http://61.221.215.25:8800/hls/41/index.m3u8?key=txiptv&playlive=1&authid=0"
+            }
+          ]
+        },
+        {
+          "name": "中视",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://211.72.174.95:8113/0.ts"
             }
           ]
         },
@@ -579,24 +360,6 @@
             {
               "name": "线路2",
               "url": "http://38.64.72.148:80/hls/modn/list/4013/chunklist1.m3u8"
-            },
-            {
-              "name": "线路3",
-              "url": "https://live.wcetv.com/hls/m3u8/ttvnews.m3u8"
-            }
-          ]
-        },
-        {
-          "name": "唯心电视",
-          "group": "🌴港澳台湾",
-          "sources": [
-            {
-              "name": "线路1",
-              "url": "http://mobile.ccdntech.com/transcoder/_definst_/vod164_Live/live/chunklist_w1177047531.m3u8"
-            },
-            {
-              "name": "线路2",
-              "url": "http://mobile.ccdntech.com/transcoder/_definst_/vod164_Live/live/playlist.m3u8"
             }
           ]
         },
@@ -627,6 +390,34 @@
             {
               "name": "线路1",
               "url": "https://tw2.amtb.de/liveedge/_definst_/smil:wdmaster.smil/playlist.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "人間衛視",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://61.216.67.119:1935/bltvhd/bltv1/chunklist_w1266569526.m3u"
+            },
+            {
+              "name": "线路2",
+              "url": "https://5ddce30eb4b55.streamlock.net/bltvhd/bltv1/chunklist_w511254805.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "唯心电视",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://mobile.ccdntech.com/transcoder/_definst_/vod164_Live/live/chunklist_w1177047531.m3u8"
+            },
+            {
+              "name": "线路2",
+              "url": "http://mobile.ccdntech.com/transcoder/_definst_/vod164_Live/live/playlist.m3u8"
             }
           ]
         },
@@ -707,10 +498,6 @@
           "group": "🌴港澳台湾",
           "sources": [
             {
-              "name": "线路1",
-              "url": "https://english-liveali.cgtn.com/hls/yypdjlctzb/playlist.m3u8"
-            },
-            {
               "name": "线路2",
               "url": "https://english-liveali.cgtn.com/hls/yypdjlctzb/yypdjlctzbcd/playlist.m3u8"
             },
@@ -725,16 +512,6 @@
           ]
         },
         {
-          "name": "中视",
-          "group": "🌴港澳台湾",
-          "sources": [
-            {
-              "name": "线路1",
-              "url": "http://211.72.174.95:8113/0.ts"
-            }
-          ]
-        },
-        {
           "name": "中天新闻",
           "group": "🌴港澳台湾",
           "sources": [
@@ -745,14 +522,6 @@
             {
               "name": "线路2",
               "url": "http://222.128.55.152:9080/live/fc.m3u8"
-            },
-            {
-              "name": "线路3",
-              "url": "http://jnzq.ohoyee.com:9080/live/xingjiaoge-ztxw2.m3u8"
-            },
-            {
-              "name": "线路4",
-              "url": "http://xiangxiws.vip:6777/qlw.php?key=qq%E7%BE%A4746405779&id=ztxw"
             }
           ]
         },
@@ -762,37 +531,71 @@
           "sources": [
             {
               "name": "线路1",
-              "url": "http://61.221.215.25:8800/hls/47/index.m3u8"
-            },
-            {
-              "name": "线路2",
               "url": "http://61.221.215.25:8800/hls/47/index.m3u8?key=txiptv&playlive=1&authid=0"
             }
           ]
         },
         {
-          "name": "中旺電視",
+          "name": "BeautifulLifeTV",
           "group": "🌴港澳台湾",
           "sources": [
             {
               "name": "线路1",
-              "url": "http://38.64.72.148/hls/modn/list/4010/chunklist0.m3u8"
+              "url": "https://5ddce30eb4b55.streamlock.net/bltvhd/bltv1/playlist.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "GOOD2",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://live-350k.streamingfast.net/hls-live/goodtv/_definst_/liveevent/live-ch2-1.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "GOODTV",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://live-350k.streamingfast.net/hls-live/goodtv/_definst_/liveevent/live-ch1-1.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "HK第一台",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://rthkaudio1-lh.akamaihd.net/i/radio1_1@355864/master.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "Hope",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "http://tvhope.cdnvideo.ru/tvhope-pull/tvhope_1/playlist.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "Love Nature",
+          "group": "🌴港澳台湾",
+          "sources": [
+            {
+              "name": "线路1",
+              "url": "https://bamus-lovenature-lg.amagi.tv/240p-cc/index.m3u8"
             },
             {
               "name": "线路2",
-              "url": "http://38.64.72.148/hls/modn/list/4010/chunklist1.m3u8"
-            },
-            {
-              "name": "线路3",
-              "url": "http://38.64.72.148/hls/modn/list/4010/playlist.m3u8"
-            },
-            {
-              "name": "线路4",
-              "url": "http://38.64.72.148:80/hls/modn/list/4010/chunklist0.m3u8"
-            },
-            {
-              "name": "线路5",
-              "url": "http://38.64.72.148:80/hls/modn/list/4010/playlist.m3u8"
+              "url": "https://bamus-lovenature-lg.amagi.tv/480p-cc/index.m3u8"
             }
           ]
         },
