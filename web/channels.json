@@ -559,40 +559,6 @@
           ]
         },
         {
-          "name": "邵氏电影",
-          "group": "🌴港澳台湾",
-          "sources": [
-            {
-              "name": "线路1",
-              "url": "http://38.75.136.137:98/gslb/dsdqpub/lbssdy.m3u8?auth=testpub"
-            }
-          ]
-        },
-        {
-          "name": "邵氏动作",
-          "group": "🌴港澳台湾",
-          "sources": [
-            {
-              "name": "线路1",
-              "url": "http://38.75.136.137:98/gslb/dsdqpub/lbssdz.m3u8?auth=testpub"
-            }
-          ]
-        },
-        {
-          "name": "生命电视",
-          "group": "🌴港澳台湾",
-          "sources": [
-            {
-              "name": "线路1",
-              "url": "http://61.216.67.119:1935/lifetv/lifetv.stream/manifest.m3u8"
-            },
-            {
-              "name": "线路2",
-              "url": "https://5ddce30eb4b55.streamlock.net/lifetv/lifetv.stream/playlist.m3u8"
-            }
-          ]
-        },
-        {
           "name": "台视",
           "group": "🌴港澳台湾",
           "sources": [
