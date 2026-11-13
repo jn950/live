@@ -1,0 +1,22 @@
+{
+  "categories": [
+    {"id": 1, "name": "央视", "en_name": "CCTV", "logo": "", "sort": 1}
+  ],
+  "channels": [
+    {
+      "id": 1,
+      "name": "CCTV-1",
+      "en_name": "CCTV-1",
+      "pinyin": "cctv1",
+      "channel_code": 1,
+      "logo": "",
+      "level": 0,
+      "category_bits": 2,
+      "epg_id": "",
+      "region_id": 0,
+      "area": "",
+      "urls": ["https://ldocctvwbcdbd.a.bdydns.com/ldocctvwbcd/cdrmldcctv2_1/index.m3u8?BR=td$官方CDN"],
+      "sort": 1
+    }
+  ]
+}
